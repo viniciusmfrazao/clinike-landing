@@ -1,0 +1,17 @@
+=== KLINIC — LANDING PAGE ===
+
+COMO USAR:
+1. Abra o arquivo index.html em qualquer navegador
+2. As imagens já estão na pasta /images
+
+PERSONALIZAÇÃO RÁPIDA:
+- WhatsApp: procure "5534991805722" e substitua pelo número correto
+- Preços: busque "119" e "159" para alterar os valores
+- Depoimentos: edite diretamente no HTML
+
+DEPLOY:
+- Netlify: arraste a pasta inteira para netlify.com/drop
+- Vercel: suba via GitHub ou CLI
+- Hospedagem tradicional: suba todos os arquivos via FTP
+
+Precisa de ajuda? Qualquer dúvida é só chamar!

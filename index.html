@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clinike — Sistema com IA para Clínicas de Estética</title>
+<title>Clinike — Sistema completo para clínicas de estética</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38 38'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='38' y2='38' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%237C3AED'/%3E%3Cstop offset='.5' stop-color='%239333EA'/%3E%3Cstop offset='1' stop-color='%23EC4899'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='38' height='38' rx='11' fill='url(%23g)'/%3E%3Crect x='16' y='9' width='6' height='20' rx='3' fill='white'/%3E%3Crect x='9' y='16' width='20' height='6' rx='3' fill='white' opacity='.9'/%3E%3Ccircle cx='28' cy='10' r='3' fill='%23F9A8D4'/%3E%3C/svg%3E">
 
   <!-- Open Graph / WhatsApp Preview -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://clinike.com.br/">
-  <meta property="og:title" content="Clinike — Sistema com IA para Clínicas de Estética">
-  <meta property="og:description" content="Eva, sua secretária digital 24h. Agenda, CRM, WhatsApp, prontuário e automações de venda em um só sistema. 100% na nuvem.">
+  <meta property="og:title" content="Clinike — Sistema completo para clínicas de estética">
+  <meta property="og:description" content="Agenda, CRM, WhatsApp, prontuário, financeiro, estoque e 6 automações que recuperam pacientes, confirmam consultas e medem satisfação. 100% na nuvem.">
   <meta property="og:image" content="https://clinike.com.br/images/dashboard-mockup.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -18,12 +18,12 @@
   <meta property="og:site_name" content="Clinike">
   <!-- Twitter/X Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Clinike — Sistema com IA para Clínicas de Estética">
-  <meta name="twitter:description" content="Eva, sua secretária digital 24h. Agenda, CRM, WhatsApp e prontuário em um só lugar.">
+  <meta name="twitter:title" content="Clinike — Sistema completo para clínicas de estética">
+  <meta name="twitter:description" content="Agenda, CRM, WhatsApp, prontuário, financeiro, estoque e 6 automações em um só sistema.">
   <meta name="twitter:image" content="https://clinike.com.br/images/dashboard-mockup.png">
   <!-- SEO -->
-  <meta name="description" content="Sistema completo para clínicas de estética com IA embutida. Eva atende WhatsApp 24h, agenda sozinha, faz follow-up de leads. CRM, financeiro, prontuário e estoque integrados.">
-  <meta name="keywords" content="sistema para clínica de estética, software clínica estética, secretária digital ia, agenda clínica, crm clínica estética, whatsapp clínica">
+  <meta name="description" content="Sistema completo para clínicas de estética. Agenda, CRM Kanban, WhatsApp integrado, prontuário, financeiro, estoque e 6 automações: aniversário, lembrete D-1, NPS pós-atendimento, recall de inativas, lista de espera e mais.">
+  <meta name="keywords" content="sistema para clínica de estética, software clínica estética, agenda clínica, crm clínica estética, whatsapp clínica, automação clínica estética, nps clínica, recall pacientes">
 
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -116,40 +116,66 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-
 .sol-card h4{font-size:15px;font-weight:700;color:var(--dark);margin-bottom:7px;display:flex;align-items:center;gap:8px}
 .sol-card p{font-size:13px;color:var(--muted);line-height:1.6}
 
-/* SEÇÃO EVA IA — destaque máximo */
-.eva-section{padding:100px 4%;background:linear-gradient(160deg,#0A0514 0%,#170B40 50%,#0D1130 100%);position:relative;overflow:hidden}
-.eva-orb1{position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(124,58,237,.35),transparent);top:-200px;left:-100px;filter:blur(80px);animation:orb1 14s ease-in-out infinite;pointer-events:none}
-.eva-orb2{position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(236,72,153,.25),transparent);bottom:-150px;right:-100px;filter:blur(80px);animation:orb2 18s ease-in-out infinite;pointer-events:none}
-.eva-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:1}
-.eva-text .section-chip{background:rgba(124,58,237,.2);border-color:rgba(167,139,250,.4);color:#E9D5FF}
-.eva-text h2{font-size:clamp(30px,3.5vw,46px);font-weight:800;color:white;line-height:1.15;margin-bottom:18px}
-.eva-text h2 .grad{background:linear-gradient(135deg,#A78BFA,#EC4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.eva-text>p{font-size:16px;color:rgba(255,255,255,.7);line-height:1.8;margin-bottom:24px}
-.eva-bullets{list-style:none;display:flex;flex-direction:column;gap:14px;margin-bottom:32px}
-.eva-bullets li{display:flex;align-items:flex-start;gap:14px;font-size:14px;color:rgba(255,255,255,.8);line-height:1.6}
-.eva-bullet-ico{width:32px;height:32px;min-width:32px;background:linear-gradient(135deg,#7C3AED,#EC4899);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;box-shadow:0 4px 14px rgba(124,58,237,.4)}
-.eva-bullets strong{color:white;font-weight:700}
-.eva-powered{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:50px;padding:8px 16px;font-size:12px;color:rgba(255,255,255,.6)}
-.eva-powered b{color:#A78BFA;font-weight:700}
+/* SEÇÃO AUTOMAÇÕES DETALHADAS */
+.autodetail-section{padding:100px 4%;background:linear-gradient(160deg,#0A0514 0%,#170B40 50%,#0D1130 100%);position:relative;overflow:hidden}
+.autodetail-orb1{position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(124,58,237,.35),transparent);top:-200px;left:-100px;filter:blur(80px);animation:orb1 14s ease-in-out infinite;pointer-events:none}
+.autodetail-orb2{position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(236,72,153,.25),transparent);bottom:-150px;right:-100px;filter:blur(80px);animation:orb2 18s ease-in-out infinite;pointer-events:none}
+.autodetail-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1}
+.autodetail-header{text-align:center;margin-bottom:60px}
+.autodetail-header .section-chip{background:rgba(124,58,237,.2);border-color:rgba(167,139,250,.4);color:#E9D5FF}
+.autodetail-header h2{font-size:clamp(30px,3.5vw,46px);font-weight:800;color:white;line-height:1.15;margin-bottom:14px}
+.autodetail-header h2 .grad{background:linear-gradient(135deg,#A78BFA,#EC4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.autodetail-header p{font-size:16px;color:rgba(255,255,255,.6);line-height:1.7;max-width:600px;margin:0 auto}
 
-/* Mockup conversa WhatsApp */
-.eva-chat{background:#0F1419;border-radius:24px;padding:14px;box-shadow:0 40px 100px rgba(0,0,0,.5);border:1px solid rgba(124,58,237,.25);max-width:420px;margin:0 auto;position:relative}
-.eva-chat-header{display:flex;align-items:center;gap:12px;padding:14px 12px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:8px}
-.eva-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#7C3AED,#EC4899);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;box-shadow:0 4px 14px rgba(124,58,237,.4)}
-.eva-info h5{font-family:'Sora',sans-serif;color:white;font-size:14px;font-weight:700;margin-bottom:2px;display:flex;align-items:center;gap:6px}
-.eva-info-dot{width:7px;height:7px;background:#10B981;border-radius:50%;animation:pulse 1.8s infinite}
-.eva-info p{font-size:11px;color:rgba(16,185,129,.85);font-weight:500}
-.eva-chat-body{padding:8px 4px;display:flex;flex-direction:column;gap:8px;min-height:380px}
-.msg{max-width:78%;padding:9px 13px;border-radius:14px;font-size:13px;line-height:1.45;animation:msgIn .4s both}
-.msg-user{align-self:flex-end;background:linear-gradient(135deg,#005C4B,#1F8C70);color:white;border-bottom-right-radius:5px}
-.msg-eva{align-self:flex-start;background:#1F2A33;color:#E9EAEC;border-bottom-left-radius:5px;border:1px solid rgba(124,58,237,.15)}
-.msg-eva.tool{background:rgba(124,58,237,.08);border:1px dashed rgba(167,139,250,.3);color:#C4B5FD;font-style:italic;font-size:11.5px;align-self:center;max-width:90%;text-align:center}
-.msg time{display:block;font-size:9px;opacity:.55;margin-top:3px;text-align:right}
-.msg-user time{color:rgba(255,255,255,.65)}
-.typing{display:flex;gap:4px;align-self:flex-start;background:#1F2A33;padding:11px 14px;border-radius:14px;border-bottom-left-radius:5px}
-.typing span{width:6px;height:6px;background:#A78BFA;border-radius:50%;animation:typing 1.2s infinite}
-.typing span:nth-child(2){animation-delay:.2s}
-.typing span:nth-child(3){animation-delay:.4s}
+.autoflow-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.autoflow-card{background:rgba(255,255,255,.03);border:1px solid rgba(167,139,250,.15);border-radius:20px;padding:28px;transition:all .3s;position:relative;overflow:hidden;backdrop-filter:blur(10px)}
+.autoflow-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,#7C3AED,#EC4899)}
+.autoflow-card:hover{transform:translateY(-4px);box-shadow:0 24px 60px rgba(124,58,237,.2);border-color:rgba(167,139,250,.35);background:rgba(255,255,255,.05)}
+.autoflow-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:16px}
+.autoflow-emoji{width:50px;height:50px;min-width:50px;background:linear-gradient(135deg,rgba(124,58,237,.3),rgba(236,72,153,.2));border:1px solid rgba(167,139,250,.3);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.autoflow-titles h3{font-family:'Sora',sans-serif;font-size:18px;font-weight:700;color:white;line-height:1.3;margin-bottom:4px}
+.autoflow-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:11px}
+.autoflow-meta .tag{background:rgba(124,58,237,.2);color:#C4B5FD;padding:2px 9px;border-radius:50px;font-weight:600;letter-spacing:.3px}
+.autoflow-meta .tag.live{background:rgba(16,185,129,.2);color:#6EE7B7;display:inline-flex;align-items:center;gap:5px}
+.autoflow-meta .tag.live::before{content:'';width:6px;height:6px;background:#10B981;border-radius:50%;animation:pulse 1.8s infinite}
+.autoflow-card>p{font-size:14px;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:14px}
+.autoflow-msg{background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:13px 15px;font-size:13px;color:#E9EAEC;line-height:1.55;font-family:'DM Sans',sans-serif;font-style:italic;position:relative}
+.autoflow-msg::before{content:'💬';position:absolute;top:-10px;left:14px;background:#170B40;padding:2px 6px;font-style:normal;font-size:13px}
+.autoflow-msg b{color:#A78BFA;font-style:normal;font-weight:700}
+.autoflow-card-full{grid-column:1/-1}
+
+/* Eva em breve - section pequena */
+.eva-soon{padding:80px 4%;background:white;text-align:center}
+.eva-soon-inner{max-width:760px;margin:0 auto;background:linear-gradient(160deg,#1a0a35 0%,#170B40 100%);border-radius:28px;padding:50px 40px;position:relative;overflow:hidden;box-shadow:0 30px 80px rgba(124,58,237,.2)}
+.eva-soon-inner::before{content:'';position:absolute;width:300px;height:300px;background:radial-gradient(circle,rgba(124,58,237,.4),transparent);top:-100px;right:-50px;filter:blur(60px)}
+.eva-soon-inner::after{content:'';position:absolute;width:250px;height:250px;background:radial-gradient(circle,rgba(236,72,153,.3),transparent);bottom:-80px;left:-50px;filter:blur(60px)}
+.eva-soon-content{position:relative;z-index:1}
+.eva-soon-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#F59E0B,#EC4899);color:white;padding:6px 16px;border-radius:50px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:18px;box-shadow:0 6px 18px rgba(236,72,153,.3)}
+.eva-soon h2{font-family:'Sora',sans-serif;font-size:clamp(26px,3vw,38px);font-weight:800;color:white;line-height:1.2;margin-bottom:14px}
+.eva-soon h2 span{background:linear-gradient(135deg,#A78BFA,#EC4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.eva-soon p{font-size:15px;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:24px;max-width:540px;margin-left:auto;margin-right:auto}
+.eva-soon-feats{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.eva-soon-feat{background:rgba(255,255,255,.06);border:1px solid rgba(167,139,250,.2);border-radius:50px;padding:8px 16px;font-size:12px;color:rgba(255,255,255,.85);font-weight:500}
+.eva-soon-cta{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#7C3AED,#EC4899);color:white;padding:13px 28px;border-radius:50px;font-family:'Sora',sans-serif;font-weight:700;font-size:14px;text-decoration:none;box-shadow:0 8px 24px rgba(124,58,237,.4);transition:all .25s}
+.eva-soon-cta:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(124,58,237,.55)}
+
+/* Gestão completa - 4 cards detalhados */
+.gestao-section{padding:90px 4%;background:linear-gradient(160deg,#FAFAFC,#F0EBFF)}
+.gestao-inner{max-width:1200px;margin:0 auto}
+.gestao-header{text-align:center;margin-bottom:50px}
+.gestao-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.gestao-card{background:white;border:1px solid var(--bord);border-radius:22px;padding:32px;transition:all .3s;position:relative;overflow:hidden}
+.gestao-card:hover{transform:translateY(-4px);box-shadow:0 24px 50px rgba(124,58,237,.12);border-color:rgba(124,58,237,.3)}
+.gestao-icon-wrap{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:16px;font-size:26px;margin-bottom:18px}
+.gestao-c1 .gestao-icon-wrap{background:linear-gradient(135deg,#FEF3C7,#FBBF24);color:#92400E}
+.gestao-c2 .gestao-icon-wrap{background:linear-gradient(135deg,#D1FAE5,#10B981);color:#065F46}
+.gestao-c3 .gestao-icon-wrap{background:linear-gradient(135deg,#EDE9FE,#A78BFA);color:#5B21B6}
+.gestao-c4 .gestao-icon-wrap{background:linear-gradient(135deg,#FCE7F3,#F472B6);color:#9F1239}
+.gestao-card h3{font-family:'Sora',sans-serif;font-size:20px;font-weight:800;color:var(--dark);margin-bottom:10px;line-height:1.25}
+.gestao-card>p{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:18px}
+.gestao-list{list-style:none;display:flex;flex-direction:column;gap:9px}
+.gestao-list li{display:flex;align-items:flex-start;gap:9px;font-size:13px;color:var(--text);line-height:1.55}
+.gestao-list li::before{content:'•';color:var(--v);font-weight:800;font-size:18px;line-height:1;flex-shrink:0;margin-top:1px}
 
 /* Seção CRM */
 .crm-section{padding:90px 4%;background:white}
@@ -202,6 +228,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-
 .mod-card:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 24px 50px rgba(0,0,0,.4)}
 .mod-card.featured{position:relative}
 .mod-card.featured::after{content:'★ NOVO';position:absolute;top:8px;right:8px;background:linear-gradient(135deg,#F59E0B,#EC4899);color:white;font-size:8px;font-weight:800;padding:2px 7px;border-radius:50px;letter-spacing:.4px}
+.mod-card.soon{position:relative;opacity:.85}
+.mod-card.soon::after{content:'⏳ EM BREVE';position:absolute;top:8px;right:8px;background:linear-gradient(135deg,#6B7280,#374151);color:white;font-size:8px;font-weight:800;padding:2px 7px;border-radius:50px;letter-spacing:.4px}
 .mod-c1{background:linear-gradient(135deg,#1e0a40,#2d1060)}
 .mod-c2{background:linear-gradient(135deg,#0a2030,#0d3350)}
 .mod-c3{background:linear-gradient(135deg,#0d2510,#0f3815)}
@@ -351,20 +379,19 @@ footer{padding:54px 4% 36px;background:#060210}
 .wa-float:hover{transform:scale(1.12)}
 
 @media(max-width:960px){
-  .hero-inner,.tab-pane.active,.tab-pane.rev,.eva-inner,.crm-inner{grid-template-columns:1fr}
+  .hero-inner,.tab-pane.active,.tab-pane.rev,.crm-inner,.autoflow-grid,.gestao-grid{grid-template-columns:1fr}
   .hero-visual,.screen-pill{display:none}
   .tab-pane.rev{direction:ltr}
   .modules-grid{grid-template-columns:repeat(3,1fr)}
-  .auto-grid{grid-template-columns:1fr 1fr}
   .price-grid,.test-grid,.problems-grid,.sol-grid,.foot-top{grid-template-columns:1fr}
   .kanban-mock{grid-template-columns:repeat(2,1fr)}
   .kanban-mock .kb-col:nth-child(n+5){display:none}
   .nav-link-cli{padding:8px 12px;font-size:12px}
   .nav-link-cli .nav-cli-text{display:none}
+  .eva-soon-inner{padding:36px 24px}
 }
 @media(max-width:600px){
   .modules-grid{grid-template-columns:repeat(2,1fr)}
-  .auto-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -397,9 +424,9 @@ footer{padding:54px 4% 36px;background:#060210}
   <div class="orb orb3"></div>
   <div class="hero-inner">
     <div>
-      <div class="hero-badge"><span class="badge-dot"></span>Único com Secretária IA 24h embutida</div>
-      <h1>Sua clínica com uma <span class="grad">secretária digital</span> que nunca dorme.</h1>
-      <p class="hero-sub">Eva atende WhatsApp 24h, agenda sozinha, classifica leads e faz follow-up. Tudo isso somado a agenda, financeiro, prontuário, CRM e estoque — num único sistema.</p>
+      <div class="hero-badge"><span class="badge-dot"></span>6 automações que vendem por você</div>
+      <h1>Sua clínica funcionando <span class="grad">no automático</span>, enquanto você atende.</h1>
+      <p class="hero-sub">Agenda, CRM, WhatsApp, prontuário, financeiro e estoque integrados. Mais 6 automações que recuperam pacientes, confirmam consultas, medem satisfação e nunca deixam um lead esfriar.</p>
       <div class="hero-actions">
         <a href="https://wa.me/5534991805722?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+o+Clinike+e+conhecer+os+planos+dispon%C3%ADveis+%F0%9F%98%8A" target="_blank" rel="noopener" class="btn-hero">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -463,100 +490,144 @@ footer{padding:54px 4% 36px;background:#060210}
       <h2 class="section-title">Você ainda perde tempo (e lead) com isso?</h2>
     </div>
     <div class="problems-grid">
-      <div class="prob-card"><span class="prob-icon">📱</span><div><h4>WhatsApp lotado e leads esfriando</h4><p>Mensagem chega às 22h e você só vê às 9h da manhã. Nessa hora o lead já fechou em outro lugar.</p></div></div>
-      <div class="prob-card"><span class="prob-icon">📊</span><div><h4>Financeiro no Excel</h4><p>Não saber quanto entrou, quanto saiu ou quanto pagar de comissão.</p></div></div>
-      <div class="prob-card"><span class="prob-icon">📂</span><div><h4>Prontuários em papel</h4><p>Ficha perdida, foto antes/depois que não encontra, histórico só na memória.</p></div></div>
-      <div class="prob-card"><span class="prob-icon">😤</span><div><h4>Recepção sobrecarregada</h4><p>Atendendo WhatsApp, confirmando consulta e fazendo check-in ao mesmo tempo.</p></div></div>
+      <div class="prob-card"><span class="prob-icon">😞</span><div><h4>Paciente que sumiu</h4><p>Aquela cliente fiel que veio 3x e nunca mais voltou. Ninguém liga, ninguém manda mensagem — vai pra concorrência.</p></div></div>
+      <div class="prob-card"><span class="prob-icon">📵</span><div><h4>Faltas e cancelamentos</h4><p>Paciente esquece da consulta marcada, não comparece, e seu profissional fica parado faturando zero.</p></div></div>
+      <div class="prob-card"><span class="prob-icon">📊</span><div><h4>Sem feedback dos atendimentos</h4><p>Você não sabe se a paciente saiu satisfeita. Sem NPS, sem reviews, sem ideia do que melhorar.</p></div></div>
+      <div class="prob-card"><span class="prob-icon">📦</span><div><h4>Produto vencido na hora errada</h4><p>Descobrir que o injetável está vencido só na hora do procedimento. Constrangimento e prejuízo.</p></div></div>
     </div>
     <div class="arrow-bridge"><div class="arrow-line"></div><div class="arrow-head">↓</div></div>
     <div style="text-align:center;margin-bottom:28px">
       <div class="section-chip">A solução</div>
-      <h2 class="section-title">Eva atende. Sistema organiza. Você fatura.</h2>
+      <h2 class="section-title">Sistema organiza. Automações cuidam do resto.</h2>
     </div>
     <div class="sol-grid">
-      <div class="sol-card"><h4>🤖 Eva — Secretária IA 24h</h4><p>Atende, responde dúvidas, agenda e faz follow-up sozinha. Você só recebe lead pronto pra fechar.</p></div>
-      <div class="sol-card"><h4>🎯 CRM com funil de vendas</h4><p>Visualize cada lead em qual estágio está. Drag-and-drop entre colunas. Nada se perde.</p></div>
-      <div class="sol-card"><h4>📊 Sistema completo integrado</h4><p>Agenda, financeiro, prontuário, estoque e mais 12 módulos — tudo conectado.</p></div>
+      <div class="sol-card"><h4>🤖 6 automações ativas</h4><p>Aniversário, confirmação D-1, NPS pós-atendimento, recall de inativas, lista de espera e mais.</p></div>
+      <div class="sol-card"><h4>🎯 CRM com funil de vendas</h4><p>Cada lead na coluna certa. Drag-and-drop entre estágios. Nada se perde.</p></div>
+      <div class="sol-card"><h4>📊 16 módulos integrados</h4><p>Agenda, WhatsApp, financeiro, prontuário, estoque, anamneses — tudo conectado num lugar só.</p></div>
     </div>
   </div>
 </section>
 
-<section class="eva-section">
-  <div class="eva-orb1"></div>
-  <div class="eva-orb2"></div>
-  <div class="eva-inner">
-    <div class="eva-text">
-      <div class="section-chip">✨ Diferencial exclusivo</div>
-      <h2>Conheça a <span class="grad">Eva</span>. Sua secretária digital 24h.</h2>
-      <p>Eva é uma IA conversacional treinada pra clínicas de estética. Ela conversa pelo WhatsApp como se fosse uma secretária real — acolhedora, elegante, vendedora sutil.</p>
-      <ul class="eva-bullets">
-        <li>
-          <div class="eva-bullet-ico">📅</div>
-          <div><strong>Agenda sozinha.</strong> Eva consulta horários reais no seu sistema e marca a consulta direto pelo WhatsApp.</div>
-        </li>
-        <li>
-          <div class="eva-bullet-ico">🎯</div>
-          <div><strong>Classifica leads.</strong> Identifica quem está quente, morno ou frio — você só foca em quem está pronto pra fechar.</div>
-        </li>
-        <li>
-          <div class="eva-bullet-ico">💬</div>
-          <div><strong>Follow-up automático em 5 estágios.</strong> Lead não respondeu? Eva volta em 2h, 24h, 48h, 5 dias e 10 dias com tom diferente em cada uma.</div>
-        </li>
-        <li>
-          <div class="eva-bullet-ico">🚨</div>
-          <div><strong>Sabe quando passar pra você.</strong> Cancelamento, reagendamento ou reclamação? Eva escala pra humano automaticamente.</div>
-        </li>
-        <li>
-          <div class="eva-bullet-ico">🎨</div>
-          <div><strong>Personalidade configurável.</strong> Você define o tom, os textos de follow-up e os tempos. Eva fala como sua marca fala.</div>
-        </li>
-      </ul>
-      <div class="eva-powered">
-        ⚡ Powered by <b>Anthropic Claude 3.5 Sonnet</b> — a IA conversacional mais avançada do mercado
-      </div>
+<section class="autodetail-section">
+  <div class="autodetail-orb1"></div>
+  <div class="autodetail-orb2"></div>
+  <div class="autodetail-inner">
+    <div class="autodetail-header">
+      <div class="section-chip">✨ Automações ativas</div>
+      <h2>6 fluxos rodando <span class="grad">no automático</span> 24h por dia</h2>
+      <p>Cada uma dessas automações está rodando agora mesmo no sistema. Configure uma vez, edite os textos quando quiser, e deixe o Clinike trabalhar por você — inclusive nos finais de semana e feriados.</p>
     </div>
-    <div>
-      <div class="eva-chat">
-        <div class="eva-chat-header">
-          <div class="eva-avatar">✨</div>
-          <div class="eva-info">
-            <h5>Eva <span class="eva-info-dot"></span></h5>
-            <p>online — respondendo agora</p>
+
+    <div class="autoflow-grid">
+
+      <div class="autoflow-card">
+        <div class="autoflow-head">
+          <div class="autoflow-emoji">🎂</div>
+          <div class="autoflow-titles">
+            <h3>Mensagem de Aniversário</h3>
+            <div class="autoflow-meta">
+              <span class="tag live">Ativa</span>
+              <span class="tag">Diário 09h</span>
+              <span class="tag">1× por ano</span>
+            </div>
           </div>
         </div>
-        <div class="eva-chat-body">
-          <div class="msg msg-user" style="animation-delay:.1s">
-            Oi, qto custa o botox? <time>14:32</time>
-          </div>
-          <div class="msg msg-eva" style="animation-delay:.5s">
-            Olá! Que bom que entrou em contato 💜 Posso saber como você prefere ser chamada? <time>14:32</time>
-          </div>
-          <div class="msg msg-user" style="animation-delay:1s">
-            Maria <time>14:33</time>
-          </div>
-          <div class="msg msg-eva tool" style="animation-delay:1.4s">
-            🛠️ registrar_interesse: botox
-          </div>
-          <div class="msg msg-eva" style="animation-delay:1.8s">
-            Que prazer, Maria! O Botox aqui na clínica fica em 12x R$ 89,90 sem juros. Posso verificar um horário especial pra você essa semana? <time>14:33</time>
-          </div>
-          <div class="msg msg-user" style="animation-delay:2.4s">
-            Pode ser sexta de manhã <time>14:34</time>
-          </div>
-          <div class="msg msg-eva tool" style="animation-delay:2.8s">
-            🛠️ consultar_agenda: sexta de manha
-          </div>
-          <div class="msg msg-eva" style="animation-delay:3.2s">
-            Tenho 9h, 10h30 e 11h disponíveis com a Dra. Sarah. Qual fica melhor? <time>14:34</time>
-          </div>
-          <div class="msg msg-user" style="animation-delay:3.8s">
-            10h30 ✨ <time>14:34</time>
-          </div>
-          <div class="typing" style="animation-delay:4.2s">
-            <span></span><span></span><span></span>
-          </div>
+        <p>Toda manhã o sistema verifica quais pacientes fazem aniversário no dia e dispara uma mensagem carinhosa pelo WhatsApp. Idempotente: nunca envia duas vezes no mesmo ano.</p>
+        <div class="autoflow-msg">
+          Oi <b>{{nome}}</b>! 🎉 Hoje é seu dia, e a equipe da Clínica Sarah Pina deseja muitas felicidades. Como presente, separamos um voucher de R$ 50 pra você usar no seu próximo procedimento ✨
         </div>
       </div>
+
+      <div class="autoflow-card">
+        <div class="autoflow-head">
+          <div class="autoflow-emoji">📅</div>
+          <div class="autoflow-titles">
+            <h3>Confirmação D-1 (24h antes)</h3>
+            <div class="autoflow-meta">
+              <span class="tag live">Ativa</span>
+              <span class="tag">Diário 20h</span>
+              <span class="tag">Reduz no-show</span>
+            </div>
+          </div>
+        </div>
+        <p>Toda noite, 24h antes da consulta, o sistema manda um lembrete personalizado. Resultado: queda imediata na taxa de faltas e cancelamentos de última hora.</p>
+        <div class="autoflow-msg">
+          Olá <b>{{nome}}</b>! Passando pra confirmar sua consulta de <b>{{procedimento}}</b> amanhã às <b>{{horario}}</b> com <b>{{profissional}}</b>. Tudo certo pra te receber? 💜
+        </div>
+      </div>
+
+      <div class="autoflow-card">
+        <div class="autoflow-head">
+          <div class="autoflow-emoji">⭐</div>
+          <div class="autoflow-titles">
+            <h3>NPS pós-atendimento</h3>
+            <div class="autoflow-meta">
+              <span class="tag live">Ativa</span>
+              <span class="tag">D+1 às 11h</span>
+              <span class="tag">Score 1-5</span>
+            </div>
+          </div>
+        </div>
+        <p>1 dia após o atendimento, o sistema pergunta a satisfação. A paciente responde com um número de 1 a 5 e o score é salvo automaticamente — você acompanha NPS por profissional, procedimento e período.</p>
+        <div class="autoflow-msg">
+          Oi <b>{{nome}}</b>! De 1 a 5, como foi sua experiência ontem? Sua opinião é o que nos faz crescer 💜 (basta responder com o número)
+        </div>
+      </div>
+
+      <div class="autoflow-card">
+        <div class="autoflow-head">
+          <div class="autoflow-emoji">💜</div>
+          <div class="autoflow-titles">
+            <h3>Recall de Inativas</h3>
+            <div class="autoflow-meta">
+              <span class="tag live">Ativa</span>
+              <span class="tag">Diário 10h</span>
+              <span class="tag">Configurável</span>
+            </div>
+          </div>
+        </div>
+        <p>Cliente sumiu há 150 dias (ou outro período que você definir)? O sistema reativa com uma mensagem carinhosa e oferta personalizada. Recupera receita que ia pra concorrência.</p>
+        <div class="autoflow-msg">
+          <b>{{nome}}</b>, faz tempo que a gente não se vê 💜 Sentimos sua falta por aqui! Que tal agendar uma avaliação gratuita pra atualizar seu protocolo de tratamento?
+        </div>
+      </div>
+
+      <div class="autoflow-card">
+        <div class="autoflow-head">
+          <div class="autoflow-emoji">⏰</div>
+          <div class="autoflow-titles">
+            <h3>Lista de Espera Inteligente</h3>
+            <div class="autoflow-meta">
+              <span class="tag live">Ativa</span>
+              <span class="tag">Tempo real</span>
+              <span class="tag">Sem horário ocioso</span>
+            </div>
+          </div>
+        </div>
+        <p>Quando uma paciente cancela, o sistema avisa automaticamente quem está na fila de espera para aquele profissional/procedimento. Encaixe rápido, agenda cheia, zero horário ocioso.</p>
+        <div class="autoflow-msg">
+          Oi <b>{{nome}}</b>! Abriu uma vaga com <b>Dra. Sarah</b> hoje às <b>15h</b> pro procedimento que você queria. Quer que eu reserve pra você? ⏳
+        </div>
+      </div>
+
+      <div class="autoflow-card">
+        <div class="autoflow-head">
+          <div class="autoflow-emoji">🎯</div>
+          <div class="autoflow-titles">
+            <h3>Lead → Cliente automático</h3>
+            <div class="autoflow-meta">
+              <span class="tag live">Ativa</span>
+              <span class="tag">Tempo real</span>
+              <span class="tag">CRM atualiza sozinho</span>
+            </div>
+          </div>
+        </div>
+        <p>Quando o paciente comparece à consulta no sistema, o lead é movido automaticamente da coluna "Agendado" pra "Cliente" no CRM. Sem clique manual, sem esquecer de atualizar.</p>
+        <div class="autoflow-msg" style="font-style:normal;color:#A78BFA">
+          ✨ <b>Lead "Maria Silva"</b> movido para <b>Cliente</b> · Procedimento: Botox · Faturamento: R$ 1.080,00 registrado.
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -644,50 +715,87 @@ footer{padding:54px 4% 36px;background:#060210}
   </div>
 </section>
 
-<section class="auto-section">
-  <div class="auto-inner">
-    <div class="auto-header">
-      <div class="section-chip">Automações</div>
-      <h2 class="section-title">Mensagens que vendem por você — 24h por dia</h2>
-      <p class="section-sub">Configure uma vez. Sistema dispara automaticamente. Templates editáveis com placeholders dinâmicos.</p>
+<section class="gestao-section">
+  <div class="gestao-inner">
+    <div class="gestao-header">
+      <div class="section-chip">Gestão completa</div>
+      <h2 class="section-title">Tudo o que sua clínica precisa pra crescer</h2>
+      <p class="section-sub">Quatro pilares de gestão integrados: estoque sob controle, financeiro transparente, prontuário organizado e anamneses digitais.</p>
     </div>
-    <div class="auto-grid">
-      <div class="auto-card">
-        <span class="auto-emoji">🎂</span>
-        <h4>Mensagem de Aniversário</h4>
-        <p>Sistema manda parabéns automático no dia do aniversário da paciente. Idempotente — manda 1x por ano.</p>
-        <span class="auto-tag">Diário 09h</span>
+    <div class="gestao-grid">
+
+      <div class="gestao-card gestao-c1">
+        <div class="gestao-icon-wrap">📦</div>
+        <h3>Estoque Inteligente</h3>
+        <p>Controle total de injetáveis, produtos e descartáveis. O sistema avisa antes de você ficar sem estoque ou com produto vencido na hora errada.</p>
+        <ul class="gestao-list">
+          <li><b>Alerta de vencimento</b> — produtos vencendo nos próximos 30, 60 ou 90 dias</li>
+          <li><b>Estoque mínimo</b> — notificação quando uma referência estiver acabando</li>
+          <li><b>Baixa automática</b> — toda saída registrada quando o procedimento é executado</li>
+          <li><b>Histórico por lote</b> — rastreabilidade completa pra auditoria sanitária</li>
+          <li><b>Custo médio</b> — sabe exatamente quanto cada procedimento "consome"</li>
+        </ul>
       </div>
-      <div class="auto-card">
-        <span class="auto-emoji">📅</span>
-        <h4>Confirmação D-1</h4>
-        <p>24h antes da consulta, paciente recebe lembrete: "Maria, amanhã 14h você tem Botox com a Dra. Sarah".</p>
-        <span class="auto-tag">Diário 20h</span>
+
+      <div class="gestao-card gestao-c2">
+        <div class="gestao-icon-wrap">💰</div>
+        <h3>Financeiro & DRE</h3>
+        <p>Controle total de entradas, saídas, comissões e fluxo de caixa. Saiba exatamente quanto sua clínica fatura — e onde está cada centavo.</p>
+        <ul class="gestao-list">
+          <li><b>DRE mensal</b> — receita, custos, despesas e lucro real em tempo real</li>
+          <li><b>Comissões automáticas</b> — calcula por profissional, procedimento ou tabela personalizada</li>
+          <li><b>Fluxo de caixa</b> — projeção de entradas e saídas dos próximos dias</li>
+          <li><b>Múltiplas formas de pagamento</b> — PIX, dinheiro, cartão (parcelado), transferência</li>
+          <li><b>Devedores & inadimplentes</b> — acompanhamento de débitos em aberto e cobranças</li>
+        </ul>
       </div>
-      <div class="auto-card">
-        <span class="auto-emoji">⭐</span>
-        <h4>NPS pós-atendimento</h4>
-        <p>1 dia depois do atendimento, paciente recebe pesquisa de 1 a 5. Score capturado automaticamente.</p>
-        <span class="auto-tag">Diário 11h</span>
+
+      <div class="gestao-card gestao-c3">
+        <div class="gestao-icon-wrap">📋</div>
+        <h3>Prontuário Eletrônico</h3>
+        <p>Histórico completo de cada paciente em um só lugar. Evoluções, fotos antes/depois, marcações anatômicas — tudo seguro e acessível de qualquer dispositivo.</p>
+        <ul class="gestao-list">
+          <li><b>Evoluções clínicas</b> — registro estruturado de cada atendimento</li>
+          <li><b>Fotos antes/depois</b> — biblioteca organizada por paciente e procedimento</li>
+          <li><b>Marcação de pontos anatômicos</b> — registre exatamente onde foi aplicado</li>
+          <li><b>Documentos digitais</b> — termos de consentimento assinados pelo celular</li>
+          <li><b>Exportação em PDF</b> — pra perícia, transferência ou histórico médico</li>
+        </ul>
       </div>
-      <div class="auto-card">
-        <span class="auto-emoji">💜</span>
-        <h4>Recall de Inativas</h4>
-        <p>Paciente sumiu há 150 dias? Sistema manda mensagem carinhosa pra reativar (configurável).</p>
-        <span class="auto-tag">Diário 10h</span>
+
+      <div class="gestao-card gestao-c4">
+        <div class="gestao-icon-wrap">📝</div>
+        <h3>Anamneses Digitais</h3>
+        <p>Envie a anamnese antes da consulta e a paciente preenche pelo celular. Você ganha tempo na recepção e dados completos antes mesmo do atendimento começar.</p>
+        <ul class="gestao-list">
+          <li><b>Link único por paciente</b> — envio direto pelo WhatsApp em 1 clique</li>
+          <li><b>Formulários personalizáveis</b> — você cria templates por procedimento</li>
+          <li><b>Validação automática</b> — campos obrigatórios e respostas estruturadas</li>
+          <li><b>Histórico anexado</b> — fica salva no prontuário automaticamente</li>
+          <li><b>Sem papel, sem caneta</b> — economia + experiência moderna pra paciente</li>
+        </ul>
       </div>
-      <div class="auto-card">
-        <span class="auto-emoji">🔄</span>
-        <h4>Follow-up de Leads (Eva)</h4>
-        <p>Lead não respondeu? Eva volta em 5 momentos: 2h, 24h, 48h, 5d e 10d. Cada msg com tom diferente.</p>
-        <span class="auto-tag">A cada 30min</span>
+
+    </div>
+  </div>
+</section>
+
+<section class="eva-soon">
+  <div class="eva-soon-inner">
+    <div class="eva-soon-content">
+      <div class="eva-soon-badge">🚀 Em desenvolvimento · Lista de espera</div>
+      <h2>Eva — sua <span>secretária digital</span> está chegando</h2>
+      <p>Estamos finalizando uma IA conversacional que vai atender seu WhatsApp 24h, agendar sozinha e fazer follow-up de leads — sem você levantar um dedo. Já está em testes finais com clínicas parceiras.</p>
+      <div class="eva-soon-feats">
+        <div class="eva-soon-feat">💬 Atende WhatsApp 24h</div>
+        <div class="eva-soon-feat">📅 Agenda sozinha</div>
+        <div class="eva-soon-feat">🎯 Classifica leads</div>
+        <div class="eva-soon-feat">🔄 Follow-up automático</div>
+        <div class="eva-soon-feat">🚨 Escala pra humano</div>
       </div>
-      <div class="auto-card">
-        <span class="auto-emoji">🎯</span>
-        <h4>Lead → Cliente automático</h4>
-        <p>Quando o paciente comparece à consulta, o lead vira "Cliente" sozinho no CRM. Sem clique manual.</p>
-        <span class="auto-tag">Tempo real</span>
-      </div>
+      <a href="https://wa.me/5534991805722?text=Ol%C3%A1%21+Quero+entrar+na+lista+de+espera+da+Eva%2C+a+secret%C3%A1ria+digital+do+Clinike+%E2%9C%A8" target="_blank" rel="noopener" class="eva-soon-cta">
+        ✨ Quero ser avisado quando a Eva for lançada
+      </a>
     </div>
   </div>
 </section>
@@ -700,10 +808,10 @@ footer{padding:54px 4% 36px;background:#060210}
       <p class="section-sub">16 módulos integrados — sem precisar contratar várias ferramentas.</p>
     </div>
     <div class="modules-grid">
-      <div class="mod-card mod-c1 featured" onclick="openModal('Eva — Secretária IA')" title="Eva IA"><span class="mod-icon">✨</span><h3>Eva — Secretária IA</h3><p>Atende WhatsApp 24h, agenda e faz follow-up</p></div>
       <div class="mod-card mod-c11 featured" onclick="openModal('CRM Kanban')" title="CRM"><span class="mod-icon">🎯</span><h3>CRM Kanban</h3><p>Funil de leads com drag-and-drop</p></div>
       <div class="mod-card mod-c14 featured" onclick="openModal('WhatsApp Profissional')" title="WhatsApp"><span class="mod-icon">💚</span><h3>WhatsApp Integrado</h3><p>Conversas, áudios, fotos e vídeos</p></div>
-      <div class="mod-card mod-c12 featured" onclick="openModal('Automações de Venda')" title="Automações"><span class="mod-icon">🤖</span><h3>Automações</h3><p>Aniversário, NPS, recall e lembretes</p></div>
+      <div class="mod-card mod-c12 featured" onclick="openModal('Automações de Venda')" title="Automações"><span class="mod-icon">🤖</span><h3>6 Automações ativas</h3><p>Aniversário, NPS, recall e lembretes</p></div>
+      <div class="mod-card mod-c1 soon" onclick="openModal('Eva — Secretária IA')" title="Eva IA"><span class="mod-icon">✨</span><h3>Eva — Secretária IA</h3><p>Atende WhatsApp 24h e agenda sozinha</p></div>
 
       <div class="mod-card mod-c2" onclick="openModal('Agenda Inteligente')" title="Agenda"><span class="mod-icon">📅</span><h3>Agenda Inteligente</h3><p>Múltiplos profissionais, dia/semana/mês</p></div>
       <div class="mod-card mod-c3" onclick="openModal('Gestão de Pacientes')" title="Pacientes"><span class="mod-icon">👥</span><h3>Gestão de Pacientes</h3><p>Cadastro completo e ficha única</p></div>
@@ -799,7 +907,7 @@ footer{padding:54px 4% 36px;background:#060210}
     <div class="test-grid">
       <div class="test-card">
         <div class="stars">★★★★★</div>
-        <p>"A Eva muda o jogo. Lead que chegava de madrugada já vinha agendado de manhã. Em 30 dias triplicamos o número de avaliações marcadas."</p>
+        <p>"A confirmação automática 24h antes praticamente acabou com as faltas. E o NPS me mostra exatamente o que cada paciente achou — virou minha bússola pra melhorar a clínica."</p>
         <div class="test-author">
           <div class="author-av" style="background:linear-gradient(135deg,#7C3AED,#EC4899)">SP</div>
           <div><div class="author-name">Dra. Sarah Pina</div><div class="author-role">Clínica Sarah Pina — Uberlândia, MG</div></div>
@@ -815,7 +923,7 @@ footer{padding:54px 4% 36px;background:#060210}
       </div>
       <div class="test-card">
         <div class="stars">★★★★★</div>
-        <p>"O CRM com follow-up automático é ouro. Lead que ia esfriar agora chega quente até a hora de fechar. Vale cada centavo."</p>
+        <p>"O recall de inativas trouxe de volta clientes que eu nem lembrava mais. Em 60 dias recuperei mais de R$ 18 mil em receita que estava parada."</p>
         <div class="test-author">
           <div class="author-av" style="background:linear-gradient(135deg,#F59E0B,#D97706)">RP</div>
           <div><div class="author-name">Renata Pimentel</div><div class="author-role">Rede Estética Premium — SP</div></div>
@@ -846,10 +954,10 @@ footer{padding:54px 4% 36px;background:#060210}
           <li><span class="ci ci-ok">✓</span>Check-in na recepção</li>
           <li><span class="ci ci-ok">✓</span>Financeiro básico</li>
           <li><span class="ci ci-ok">✓</span>Lista de espera</li>
-          <li class="off"><span class="ci ci-no">✗</span>Eva — Secretária IA</li>
-          <li class="off"><span class="ci ci-no">✗</span>CRM com funil</li>
+          <li class="off"><span class="ci ci-no">✗</span>CRM Kanban com funil</li>
           <li class="off"><span class="ci ci-no">✗</span>WhatsApp integrado</li>
-          <li class="off"><span class="ci ci-no">✗</span>Automações de venda</li>
+          <li class="off"><span class="ci ci-no">✗</span>6 automações de venda</li>
+          <li class="off"><span class="ci ci-no">✗</span>NPS pós-atendimento</li>
           <li class="off"><span class="ci ci-no">✗</span>DRE completo</li>
           <li class="off"><span class="ci ci-no">✗</span>Devedores</li>
           <li class="off"><span class="ci ci-no">✗</span>Documentos digitais</li>
@@ -857,16 +965,16 @@ footer{padding:54px 4% 36px;background:#060210}
         <a href="https://wa.me/5534991805722?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+o+plano+Starter+do+Clinike+%F0%9F%98%8A" target="_blank" rel="noopener" class="plan-btn pb-out">Falar com especialista</a>
       </div>
       <div class="price-card pop">
-        <div class="pop-badge">⚡ Mais completo · com Eva IA</div>
+        <div class="pop-badge">⚡ Mais completo · com automações</div>
         <div class="plan-name">Professional</div>
         <div class="plan-desc">Para clínicas em crescimento</div>
         <div class="plan-price"><span class="pc">R$</span><span class="pa">189</span><span class="pct">,90</span><span class="pp">/mês</span></div>
         <ul class="plan-feats">
           <li><span class="ci ci-ok">✓</span>Profissionais ilimitados</li>
-          <li class="hl"><span class="ci ci-star">★</span><strong>Eva — Secretária IA 24h</strong></li>
+          <li class="hl"><span class="ci ci-star">★</span><strong>6 automações ativas</strong></li>
           <li class="hl"><span class="ci ci-star">★</span><strong>CRM Kanban com funil</strong></li>
           <li class="hl"><span class="ci ci-star">★</span><strong>WhatsApp integrado</strong></li>
-          <li class="hl"><span class="ci ci-star">★</span><strong>5 automações de venda</strong></li>
+          <li class="hl"><span class="ci ci-star">★</span><strong>NPS pós-atendimento</strong></li>
           <li><span class="ci ci-ok">✓</span>Agenda completa</li>
           <li><span class="ci ci-ok">✓</span>Gestão de pacientes</li>
           <li><span class="ci ci-ok">✓</span>Prontuário eletrônico</li>
@@ -877,8 +985,9 @@ footer{padding:54px 4% 36px;background:#060210}
           <li><span class="ci ci-ok">✓</span>Devedores & inadimplentes</li>
           <li><span class="ci ci-ok">✓</span>Chat interno da equipe</li>
           <li><span class="ci ci-ok">✓</span>Relatórios e dashboards</li>
+          <li style="color:#A78BFA;font-style:italic"><span class="ci ci-star">⏳</span>Eva — Secretária IA <em>(em breve)</em></li>
         </ul>
-        <a href="https://wa.me/5534991805722?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+o+plano+Professional+com+Eva+IA+%F0%9F%98%8A" target="_blank" rel="noopener" class="plan-btn pb-main">Falar com especialista</a>
+        <a href="https://wa.me/5534991805722?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+o+plano+Professional+do+Clinike+%F0%9F%98%8A" target="_blank" rel="noopener" class="plan-btn pb-main">Falar com especialista</a>
       </div>
     </div>
     <p class="price-note">Dúvidas sobre qual plano escolher? <a href="https://wa.me/5534991805722?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+o+Clinike+e+conhecer+os+planos+dispon%C3%ADveis+%F0%9F%98%8A" target="_blank" rel="noopener">Fale com a gente →</a></p>
@@ -893,12 +1002,16 @@ footer{padding:54px 4% 36px;background:#060210}
     </div>
     <div class="faq-list">
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">A Eva (IA) substitui minha secretária?<span class="faq-ico">+</span></div>
-        <div class="faq-a">A Eva é uma assistente, não uma substituta. Ela cuida do "primeiro atendimento" 24h por dia (responder dúvidas, consultar agenda, marcar avaliação) e escala pra você ou sua equipe quando o caso pede toque humano — cancelamentos, reagendamentos, reclamações. Sua secretária ganha tempo pra focar no que importa: a paciente que está dentro da clínica.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">As mensagens automáticas (aniversário, confirmação, NPS...) podem ser personalizadas?<span class="faq-ico">+</span></div>
+        <div class="faq-a">Sim, todas. Cada template tem placeholders dinâmicos (<b>{{nome}}</b>, <b>{{procedimento}}</b>, <b>{{horario}}</b>, etc.) que o sistema preenche automaticamente. Você edita o texto, o tom e a assinatura quando quiser, sem precisar de programador.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">A Eva pode falar coisa errada?<span class="faq-ico">+</span></div>
-        <div class="faq-a">A Eva tem regras rigorosas: ela só passa horários reais (consulta sua agenda no momento), só fala de procedimentos cadastrados na sua clínica, segue uma personalidade configurada por você e escala pra humano quando o caso é delicado. Tudo é auditável — você lê todas as conversas a qualquer momento.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">Como o NPS funciona na prática?<span class="faq-ico">+</span></div>
+        <div class="faq-a">No dia seguinte ao atendimento (11h da manhã), o sistema manda uma mensagem perguntando "de 1 a 5, como foi sua experiência?". A paciente responde com o número e o sistema captura automaticamente — você acompanha a média geral, por profissional, por procedimento e por período. Promotores (4-5) podem virar reviews; detratores (1-2) viram alerta pra você ligar.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">A Eva (IA) já está disponível?<span class="faq-ico">+</span></div>
+        <div class="faq-a">A Eva está em fase final de desenvolvimento e testes com clínicas parceiras. Em breve será liberada pra todos os clientes do plano Professional. Se quiser ser avisado no lançamento (e talvez entrar como tester antecipado), fala com nossa equipe pelo WhatsApp.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">Preciso instalar alguma coisa?<span class="faq-ico">+</span></div>
@@ -947,7 +1060,7 @@ footer{padding:54px 4% 36px;background:#060210}
       <span>🔒 Sem fidelidade</span>
       <span>💳 Cancele quando quiser</span>
       <span>💬 Suporte no WhatsApp</span>
-      <span>✨ Eva incluída no Pro</span>
+      <span>🤖 6 automações inclusas</span>
     </div>
   </div>
 </section>
@@ -966,7 +1079,7 @@ footer{padding:54px 4% 36px;background:#060210}
           </svg>
           <span style="font-family:'Sora',sans-serif;font-weight:800;font-size:19px;background:linear-gradient(135deg,#A78BFA,#F9A8D4);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Clinike</span>
         </div>
-        <p>Sistema com IA para clínicas de estética. Eva, sua secretária digital 24h, mais 16 módulos integrados. Simples como deve ser.</p>
+        <p>Sistema completo para clínicas de estética. 16 módulos integrados, 6 automações que vendem por você e Eva (IA) chegando em breve. Simples como deve ser.</p>
       </div>
       <div class="foot-col"><h4>Produto</h4><ul><li><a href="#showcase">Funcionalidades</a></li><li><a href="#planos">Planos</a></li><li><a href="https://app.clinike.com.br/login">Entrar no sistema</a></li></ul></div>
       <div class="foot-col"><h4>Empresa</h4><ul><li><a href="#">Sobre nós</a></li><li><a href="#">Blog</a></li><li><a href="#">Contato</a></li></ul></div>
@@ -1019,10 +1132,10 @@ document.querySelectorAll('.mod-card,.test-card,.prob-card,.sol-card,.price-card
 
 <script>
 const modData = {
-  "Eva — Secretária IA": ["✨", "Eva é uma IA conversacional treinada pra clínicas de estética. Atende WhatsApp 24h por dia, agenda consulta sozinha (consultando sua agenda real), faz follow-up automático em 5 estágios e escala pra humano quando o caso pede toque pessoal. Powered by Anthropic Claude 3.5 Sonnet."],
+  "Eva — Secretária IA": ["✨", "EM BREVE: Eva é uma IA conversacional treinada pra clínicas de estética. Vai atender WhatsApp 24h por dia, agendar consulta sozinha, fazer follow-up automático e escalar pra humano quando o caso pedir. Está em fase final de testes — entre em contato pra entrar na lista de espera."],
   "CRM Kanban": ["🎯", "Funil de vendas com 5 colunas (Novo Lead → Em Conversa → Agendado → Cliente / Perdido). Drag-and-drop pra mover cards. Cores automáticas de prioridade (quente/morno/frio). Integrado com Eva — quando ela agenda, o card move sozinho."],
   "WhatsApp Profissional": ["💚", "Conexão direto com Evolution API. Conversas em tempo real, envio de áudio, foto, vídeo e documentos. Múltiplas atendentes podem operar ao mesmo tempo. Histórico completo persistido no sistema."],
-  "Automações de Venda": ["🤖", "5 automações que vendem por você: aniversário automático, confirmação D-1 (24h antes), NPS pós-atendimento (com captura de score 1-5), recall de inativas (>150 dias) e follow-up de leads em 5 estágios. Templates editáveis com placeholders dinâmicos."],
+  "Automações de Venda": ["🤖", "6 automações que vendem por você: aniversário automático, confirmação D-1 (24h antes), NPS pós-atendimento com captura de score 1-5, recall de inativas (>150 dias), lista de espera inteligente e lead → cliente automático. Templates editáveis com placeholders dinâmicos."],
   "Agenda Inteligente": ["📅", "Visualize todos os agendamentos em uma tela só. Organize por dia, semana ou mês, com múltiplos profissionais lado a lado. Encaixes, remarcações e lista de espera integrados — tudo em menos de 30 segundos."],
   "Gestão de Pacientes": ["👥", "Cadastro completo com histórico de procedimentos, fotos, anamneses digitais e preferências. Encontre qualquer paciente em segundos e tenha tudo que precisa antes mesmo dela sentar na cadeira."],
   "Financeiro & DRE": ["💰", "Controle total de entradas e saídas, cálculo automático de comissões, DRE mensal e fluxo de caixa em tempo real. Saiba exatamente quanto sua clínica fatura e onde está cada centavo."],

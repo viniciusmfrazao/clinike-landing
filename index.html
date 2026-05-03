@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clinike — Sistema completo para clínicas de estética</title>
+<title>Clinike — Simples Como Deve Ser</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38 38'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='38' y2='38' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%237C3AED'/%3E%3Cstop offset='.5' stop-color='%239333EA'/%3E%3Cstop offset='1' stop-color='%23EC4899'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='38' height='38' rx='11' fill='url(%23g)'/%3E%3Crect x='16' y='9' width='6' height='20' rx='3' fill='white'/%3E%3Crect x='9' y='16' width='20' height='6' rx='3' fill='white' opacity='.9'/%3E%3Ccircle cx='28' cy='10' r='3' fill='%23F9A8D4'/%3E%3C/svg%3E">
 
   <!-- Open Graph / WhatsApp Preview -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://clinike.com.br/">
-  <meta property="og:title" content="Clinike — Sistema completo para clínicas de estética">
-  <meta property="og:description" content="Agenda, CRM, WhatsApp, prontuário, financeiro, estoque e 6 automações que recuperam pacientes, confirmam consultas e medem satisfação. 100% na nuvem.">
+  <meta property="og:title" content="Clinike — Simples Como Deve Ser">
+  <meta property="og:description" content="Sistema completo para clínicas de estética. Agenda, CRM, WhatsApp, prontuário, financeiro e 6 automações que vendem por você. Simples como deve ser.">
   <meta property="og:image" content="https://clinike.com.br/images/dashboard-mockup.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -18,7 +18,7 @@
   <meta property="og:site_name" content="Clinike">
   <!-- Twitter/X Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Clinike — Sistema completo para clínicas de estética">
+  <meta name="twitter:title" content="Clinike — Simples Como Deve Ser">
   <meta name="twitter:description" content="Agenda, CRM, WhatsApp, prontuário, financeiro, estoque e 6 automações em um só sistema.">
   <meta name="twitter:image" content="https://clinike.com.br/images/dashboard-mockup.png">
   <!-- SEO -->
@@ -66,7 +66,10 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-
 .orb2{width:400px;height:400px;background:radial-gradient(circle,#EC4899,transparent);bottom:-100px;left:-80px;animation:orb2 15s ease-in-out infinite}
 .orb3{width:300px;height:300px;background:radial-gradient(circle,#06B6D4,transparent);top:50%;right:30%;animation:orb2 10s ease-in-out infinite reverse}
 .hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:1}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(124,58,237,.2);border:1px solid rgba(167,139,250,.4);border-radius:50px;padding:6px 16px;font-size:13px;color:#C4B5FD;font-weight:600;margin-bottom:22px;animation:fadeUp .6s both}
+.hero-eyebrow{font-family:'Sora',sans-serif;font-weight:700;font-size:11px;letter-spacing:3px;text-transform:uppercase;background:linear-gradient(135deg,#A78BFA,#F9A8D4);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:14px;display:block;animation:fadeUp .6s both}
+.hero-eyebrow::before{content:'—';margin-right:8px;-webkit-text-fill-color:rgba(167,139,250,.5);color:rgba(167,139,250,.5)}
+.hero-eyebrow::after{content:'—';margin-left:8px;-webkit-text-fill-color:rgba(167,139,250,.5);color:rgba(167,139,250,.5)}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(124,58,237,.2);border:1px solid rgba(167,139,250,.4);border-radius:50px;padding:6px 16px;font-size:13px;color:#C4B5FD;font-weight:600;margin-bottom:22px;animation:fadeUp .6s .05s both}
 .badge-dot{width:7px;height:7px;background:#10B981;border-radius:50%;animation:pulse 2s infinite}
 .hero h1{font-size:clamp(34px,4vw,54px);font-weight:800;line-height:1.1;color:white;margin-bottom:18px;animation:fadeUp .7s .1s both}
 .hero h1 .grad{background:linear-gradient(135deg,#A78BFA,#EC4899,#06B6D4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:200%;animation:shimmer 3s linear infinite}
@@ -424,6 +427,7 @@ footer{padding:54px 4% 36px;background:#060210}
   <div class="orb orb3"></div>
   <div class="hero-inner">
     <div>
+      <span class="hero-eyebrow">Simples como deve ser</span>
       <div class="hero-badge"><span class="badge-dot"></span>6 automações que vendem por você</div>
       <h1>Sua clínica funcionando <span class="grad">no automático</span>, enquanto você atende.</h1>
       <p class="hero-sub">Agenda, CRM, WhatsApp, prontuário, financeiro e estoque integrados. Mais 6 automações que recuperam pacientes, confirmam consultas, medem satisfação e nunca deixam um lead esfriar.</p>
@@ -1001,6 +1005,10 @@ footer{padding:54px 4% 36px;background:#060210}
       <h2 class="section-title">Ficou com alguma dúvida?</h2>
     </div>
     <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Minha equipe vai demorar pra aprender?<span class="faq-ico">+</span></div>
+        <div class="faq-a">A maioria das clínicas começa a usar no mesmo dia. Cada profissional vê só os módulos do papel dele (secretária ≠ médico ≠ admin), e o sistema tem tutorial guiado nos primeiros acessos. Sem manual de 200 páginas, sem treinamento de 8 horas — é fluido como qualquer aplicativo que você já usa no celular.</div>
+      </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">As mensagens automáticas (aniversário, confirmação, NPS...) podem ser personalizadas?<span class="faq-ico">+</span></div>
         <div class="faq-a">Sim, todas. Cada template tem placeholders dinâmicos (<b>{{nome}}</b>, <b>{{procedimento}}</b>, <b>{{horario}}</b>, etc.) que o sistema preenche automaticamente. Você edita o texto, o tom e a assinatura quando quiser, sem precisar de programador.</div>

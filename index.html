@@ -381,20 +381,196 @@ footer{padding:54px 4% 36px;background:#060210}
 .wa-float{position:fixed;bottom:24px;right:24px;width:56px;height:56px;background:linear-gradient(135deg,#128C7E,#25D366);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.45);z-index:500;text-decoration:none;animation:wa-bob 3s ease-in-out infinite}
 .wa-float:hover{transform:scale(1.12)}
 
+/* === TABLET / MOBILE GRANDE === */
 @media(max-width:960px){
-  .hero-inner,.tab-pane.active,.tab-pane.rev,.crm-inner,.autoflow-grid,.gestao-grid{grid-template-columns:1fr}
+  .hero-inner,.tab-pane.active,.tab-pane.rev,.crm-inner,.autoflow-grid,.gestao-grid{grid-template-columns:1fr;gap:36px}
   .hero-visual,.screen-pill{display:none}
   .tab-pane.rev{direction:ltr}
-  .modules-grid{grid-template-columns:repeat(3,1fr)}
-  .price-grid,.test-grid,.problems-grid,.sol-grid,.foot-top{grid-template-columns:1fr}
-  .kanban-mock{grid-template-columns:repeat(2,1fr)}
-  .kanban-mock .kb-col:nth-child(n+5){display:none}
+
+  /* Nav */
+  .nav-inner{height:60px;gap:8px}
+  .logo svg{width:30px;height:30px}
+  .logo-txt{font-size:18px}
   .nav-link-cli{padding:8px 12px;font-size:12px}
   .nav-link-cli .nav-cli-text{display:none}
-  .eva-soon-inner{padding:36px 24px}
+  .nav-cta{padding:9px 18px;font-size:13px}
+
+  /* Hero */
+  .hero{padding:50px 4% 40px;min-height:auto}
+  .hero h1{font-size:clamp(28px,7vw,42px);line-height:1.18;margin-bottom:14px}
+  .hero-sub{font-size:15px;line-height:1.65;margin-bottom:24px;max-width:none}
+  .hero-actions{flex-direction:column;align-items:stretch;gap:10px;width:100%}
+  .hero-actions a{justify-content:center;width:100%;text-align:center}
+  .btn-hero{padding:14px 22px;font-size:14px}
+  .btn-ghost{padding:13px 22px;font-size:13px}
+  .hero-stats{margin-top:28px;gap:18px;display:grid;grid-template-columns:repeat(3,1fr)}
+  .hero-stats .stat-divider{display:none}
+  .hero-stats>div{text-align:left}
+  .stat-num{font-size:22px}
+  .stat-lbl{font-size:11px;line-height:1.3}
+
+  /* Section titles globais */
+  .section-title{font-size:clamp(22px,5.5vw,32px);line-height:1.25}
+  .section-sub{font-size:14.5px}
+
+  /* Trust */
+  .trust{padding:22px 4%}
+  .trust-inner{gap:14px}
+  .trust-logos{gap:16px;justify-content:center}
+  .trust-logo{font-size:12px}
+  .trust-label{font-size:11px}
+
+  /* Problem / Solution */
+  .problem{padding:60px 4%}
+  .problems-grid,.sol-grid{grid-template-columns:1fr;gap:12px;margin-top:30px}
+  .prob-card,.sol-card{padding:18px}
+  .prob-card h4,.sol-card h4{font-size:14.5px}
+  .prob-card p,.sol-card p{font-size:13px}
+  .arrow-bridge{margin:30px 0}
+  .arrow-line{height:40px}
+
+  /* Autoflow detail */
+  .autodetail-section{padding:60px 4%}
+  .autodetail-header{margin-bottom:36px}
+  .autoflow-card{padding:22px}
+  .autoflow-head{gap:12px;margin-bottom:14px}
+  .autoflow-emoji{width:44px;height:44px;min-width:44px;font-size:20px;border-radius:12px}
+  .autoflow-titles h3{font-size:16.5px}
+  .autoflow-meta{gap:6px}
+  .autoflow-meta .tag{font-size:10px;padding:2px 7px}
+  .autoflow-card>p{font-size:13px;line-height:1.6}
+  .autoflow-msg{font-size:12.5px;padding:11px 13px}
+
+  /* CRM */
+  .crm-section{padding:60px 4%}
+  .crm-text h2{font-size:clamp(22px,5.5vw,32px)}
+  .crm-text>p{font-size:14px}
+  .crm-feats li{font-size:13px}
+  .kanban-mock{grid-template-columns:repeat(2,1fr);padding:14px;gap:8px}
+  .kanban-mock .kb-col:nth-child(n+5){display:none}
+  .kb-col{min-height:200px;padding:10px 8px}
+
+  /* Gestao */
+  .gestao-section{padding:60px 4%}
+  .gestao-grid{gap:14px}
+  .gestao-card{padding:24px}
+  .gestao-icon-wrap{width:48px;height:48px;font-size:22px;margin-bottom:14px;border-radius:14px}
+  .gestao-card h3{font-size:18px}
+  .gestao-card>p{font-size:13.5px;margin-bottom:14px}
+  .gestao-list li{font-size:12.5px;line-height:1.5}
+
+  /* Eva soon */
+  .eva-soon{padding:50px 4%}
+  .eva-soon-inner{padding:40px 22px}
+  .eva-soon h2{font-size:clamp(22px,5.5vw,30px)}
+  .eva-soon p{font-size:14px}
+  .eva-soon-feats{gap:8px;margin-bottom:24px}
+  .eva-soon-feat{font-size:11px;padding:6px 12px}
+  .eva-soon-cta{padding:12px 22px;font-size:13px}
+
+  /* Features (modulos) */
+  .features{padding:60px 4%}
+  .feat-header{margin-bottom:32px}
+  .modules-grid{grid-template-columns:repeat(3,1fr);gap:10px}
+  .mod-card{padding:18px 12px}
+  .mod-icon{font-size:24px;margin-bottom:8px}
+  .mod-card h3{font-size:12px;line-height:1.3;margin-bottom:4px}
+  .mod-card p{font-size:10.5px;line-height:1.45}
+  .mod-card.featured::after,.mod-card.soon::after{font-size:7px;padding:1px 5px;top:5px;right:5px}
+
+  /* Showcase */
+  .showcase{padding:60px 4%}
+  .showcase-header{margin-bottom:30px}
+  .tab-btn{padding:8px 16px;font-size:12px}
+  .ss-text h3{font-size:21px;margin-bottom:10px}
+  .ss-text p{font-size:14px;margin-bottom:16px}
+  .feat-list li{font-size:13px}
+  .ss-badge{font-size:10px;padding:5px 11px;top:-12px;right:-8px}
+  .mobile-frame{width:220px}
+
+  /* Testimonials */
+  .testimonials{padding:60px 4%}
+  .test-grid{grid-template-columns:1fr;gap:14px}
+  .test-header{margin-bottom:32px}
+  .test-card{padding:22px}
+  .test-card p{font-size:13.5px}
+
+  /* Pricing */
+  .pricing{padding:60px 4%}
+  .price-header{margin-bottom:36px}
+  .price-grid{grid-template-columns:1fr;gap:18px}
+  .price-card{padding:28px 22px}
+  .pa{font-size:44px}
+  .pct{font-size:18px}
+  .plan-feats li{font-size:12.5px}
+
+  /* FAQ */
+  .faq{padding:60px 4%}
+  .faq-header{margin-bottom:32px}
+  .faq-q{padding:16px 18px;font-size:14px}
+  .faq-a{padding:0 18px;font-size:13px;line-height:1.7}
+  .faq-item.open .faq-a{padding:0 18px 18px;max-height:400px}
+  .faq-ico{width:24px;height:24px;min-width:24px;font-size:14px}
+
+  /* Final CTA */
+  .final-cta{padding:60px 4%}
+  .cta-inner h2{margin-bottom:12px}
+  .cta-inner p{font-size:15px;margin-bottom:26px}
+  .cta-actions{flex-direction:column;gap:10px;width:100%}
+  .cta-actions>a{width:100%;justify-content:center;max-width:340px;margin:0 auto}
+  .btn-wa,.btn-cli{padding:15px 22px;font-size:14px}
+  .cta-tags{gap:10px;margin-top:20px;font-size:12px}
+
+  /* Footer */
+  .foot-top{grid-template-columns:1fr;gap:28px;margin-bottom:32px}
+  footer{padding:42px 4% 28px}
+
+  /* Whatsapp float */
+  .wa-float{width:50px;height:50px;bottom:16px;right:16px}
+  .wa-float svg{width:22px;height:22px}
+
+  /* Hero eyebrow */
+  .hero-eyebrow{font-size:10px;letter-spacing:2.5px;margin-bottom:12px}
 }
+
+/* === MOBILE PEQUENO === */
 @media(max-width:600px){
+  .nav-inner{height:56px}
+  .logo-txt{font-size:17px}
+  .nav-cta{padding:8px 14px;font-size:12px}
+
+  .hero{padding:40px 4% 32px}
+  .hero h1{font-size:clamp(24px,7.5vw,32px)}
+  .hero-sub{font-size:14.5px}
+  .hero-stats{gap:10px}
+  .stat-num{font-size:20px}
+  .stat-lbl{font-size:10.5px}
+
   .modules-grid{grid-template-columns:repeat(2,1fr)}
+
+  .cta-tags{flex-direction:column;gap:8px}
+
+  .gestao-card,.test-card,.autoflow-card{padding:18px}
+  .gestao-card h3,.autoflow-titles h3{font-size:16px}
+
+  .eva-soon-inner{padding:32px 18px;border-radius:20px}
+  .eva-soon-feats{gap:6px}
+
+  .price-card{padding:24px 18px}
+  .pa{font-size:38px}
+
+  .kb-card{font-size:9.5px;padding:7px}
+  .kb-card b{font-size:10px}
+  .kb-tag{font-size:7.5px}
+
+  .arrow-line{height:32px}
+}
+
+/* === EXTRA SMALL (<380px) === */
+@media(max-width:380px){
+  .modules-grid{grid-template-columns:1fr 1fr;gap:8px}
+  .hero h1{font-size:24px}
+  .nav-link-cli{display:none}
 }
 </style>
 </head>

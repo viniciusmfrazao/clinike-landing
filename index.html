@@ -60,12 +60,12 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-
 .nav-cta{background:linear-gradient(135deg,#7C3AED,#9333EA);color:white;padding:10px 22px;border-radius:50px;font-family:'Sora',sans-serif;font-weight:700;font-size:14px;text-decoration:none;transition:all .25s;box-shadow:0 4px 14px rgba(124,58,237,.35);white-space:nowrap}
 .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(124,58,237,.5)}
 
-.hero{padding:80px 4% 60px;background:linear-gradient(155deg,#0A0514 0%,#1a0540 40%,#0d1a40 70%,#041a14 100%);position:relative;overflow:hidden;min-height:620px}
+.hero{padding:60px 4% 0px;background:linear-gradient(155deg,#0A0514 0%,#1a0540 40%,#0d1a40 70%,#041a14 100%);position:relative;overflow:hidden;min-height:580px}
 .orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;opacity:.6}
 .orb1{width:500px;height:500px;background:radial-gradient(circle,#7C3AED,transparent);top:-150px;right:-100px;animation:orb1 12s ease-in-out infinite}
 .orb2{width:400px;height:400px;background:radial-gradient(circle,#EC4899,transparent);bottom:-100px;left:-80px;animation:orb2 15s ease-in-out infinite}
 .orb3{width:300px;height:300px;background:radial-gradient(circle,#06B6D4,transparent);top:50%;right:30%;animation:orb2 10s ease-in-out infinite reverse}
-.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:1}
+.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:flex-end;position:relative;z-index:1}
 .hero-eyebrow{font-family:'Sora',sans-serif;font-weight:700;font-size:11px;letter-spacing:3px;text-transform:uppercase;background:linear-gradient(135deg,#A78BFA,#F9A8D4);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:14px;display:block;animation:fadeUp .6s both}
 .hero-eyebrow::before{content:'—';margin-right:8px;-webkit-text-fill-color:rgba(167,139,250,.5);color:rgba(167,139,250,.5)}
 .hero-eyebrow::after{content:'—';margin-left:8px;-webkit-text-fill-color:rgba(167,139,250,.5);color:rgba(167,139,250,.5)}
@@ -84,9 +84,9 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-
 .stat-lbl{font-size:12px;color:rgba(255,255,255,.5)}
 .stat-divider{width:1px;background:rgba(255,255,255,.15)}
 
-.hero-visual{position:relative;animation:fadeUp .7s .2s both;margin-top:-40px}
+.hero-visual{position:relative;animation:fadeUp .7s .2s both;align-self:flex-end}
 .screen-wrap{position:relative;display:flex;justify-content:center}
-.screen-main{width:100%;max-width:560px;border-radius:14px;box-shadow:0 40px 100px rgba(0,0,0,.5),0 0 0 1px rgba(124,58,237,.3);animation:float 7s ease-in-out infinite;border:1px solid rgba(124,58,237,.3);transform:translateY(-20px)}
+.screen-main{width:100%;max-width:520px;border-radius:14px 14px 0 0;box-shadow:0 -20px 80px rgba(124,58,237,.3),0 0 0 1px rgba(124,58,237,.3);animation:float 7s ease-in-out infinite;border:1px solid rgba(124,58,237,.3);border-bottom:none}
 .hero-mobile-visual{display:none}
 .screen-pill{position:absolute;bottom:-20px;right:10px;background:linear-gradient(135deg,#0F0A1E,#1a1040);border:1px solid rgba(124,58,237,.4);border-radius:14px;padding:12px 16px;display:flex;align-items:center;gap:10px;box-shadow:0 12px 40px rgba(0,0,0,.4);animation:float 7s .6s ease-in-out infinite;max-width:230px}
 .pill-dot{width:8px;height:8px;background:#10B981;border-radius:50%;animation:pulse 1.5s infinite;flex-shrink:0}
@@ -94,6 +94,12 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-
 .pill-num{font-family:'Sora',sans-serif;font-size:18px;font-weight:800;color:#A78BFA}
 
 .trust{padding:32px 4%;background:white;border-bottom:1px solid var(--bord)}
+.roi-bar{background:linear-gradient(135deg,#0F0A1E,#1a0540);padding:22px 4%;border-bottom:1px solid rgba(124,58,237,.2)}
+.roi-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.roi-item{display:flex;flex-direction:column;align-items:center;gap:3px;flex:1;min-width:140px}
+.roi-num{font-family:'Sora',sans-serif;font-weight:800;font-size:26px;background:linear-gradient(135deg,#A78BFA,#F9A8D4);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.roi-lbl{font-size:12px;color:rgba(255,255,255,.5);text-align:center;line-height:1.4}
+.roi-div{width:1px;height:40px;background:rgba(167,139,250,.2);flex-shrink:0}
 .trust-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:32px;flex-wrap:wrap;justify-content:center}
 .trust-label{font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:1.5px;white-space:nowrap}
 .trust-logos{display:flex;gap:36px;flex-wrap:wrap;align-items:center}
@@ -386,8 +392,9 @@ footer{padding:54px 4% 36px;background:#060210}
 @media(max-width:960px){
   .hero-inner,.tab-pane.active,.tab-pane.rev,.crm-inner,.autoflow-grid,.gestao-grid{grid-template-columns:1fr;gap:36px}
   .hero-visual,.screen-pill{display:none}
-  .hero-mobile-visual{display:flex;justify-content:center;margin-top:32px}
-  .hero-mobile-img{width:200px;border-radius:28px;box-shadow:0 24px 60px rgba(0,0,0,.4),0 0 0 1px rgba(124,58,237,.3);animation:float 7s ease-in-out infinite}
+  .hero-mobile-visual{display:flex;justify-content:center;margin-top:36px;position:relative}
+  .hero-mobile-visual::before{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:280px;height:280px;background:radial-gradient(ellipse,rgba(124,58,237,.35) 0%,rgba(236,72,153,.2) 50%,transparent 70%);border-radius:50%;pointer-events:none}
+  .hero-mobile-img{width:240px;border-radius:32px;box-shadow:0 32px 80px rgba(0,0,0,.5),0 0 0 1px rgba(167,139,250,.3),0 0 60px rgba(124,58,237,.2);animation:float 7s ease-in-out infinite;position:relative;z-index:1}
   .tab-pane.rev{direction:ltr}
 
   /* Nav */
@@ -656,6 +663,30 @@ footer{padding:54px 4% 36px;background:#060210}
     </div>
   </div>
 </section>
+
+<div class="roi-bar">
+  <div class="roi-inner">
+    <div class="roi-item">
+      <span class="roi-num">+38%</span>
+      <span class="roi-lbl">mais agendamentos com Eva IA</span>
+    </div>
+    <div class="roi-div"></div>
+    <div class="roi-item">
+      <span class="roi-num">-62%</span>
+      <span class="roi-lbl">no-show com lembrete D-1</span>
+    </div>
+    <div class="roi-div"></div>
+    <div class="roi-item">
+      <span class="roi-num">4,9★</span>
+      <span class="roi-lbl">média de NPS das clínicas</span>
+    </div>
+    <div class="roi-div"></div>
+    <div class="roi-item">
+      <span class="roi-num">7min</span>
+      <span class="roi-lbl">para configurar e começar</span>
+    </div>
+  </div>
+</div>
 
 <div class="trust">
   <div class="trust-inner">

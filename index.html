@@ -154,20 +154,42 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-
 .autoflow-msg b{color:#A78BFA;font-style:normal;font-weight:700}
 .autoflow-card-full{grid-column:1/-1}
 
-/* Eva em breve - section pequena */
-.eva-soon{padding:80px 4%;background:white;text-align:center}
-.eva-soon-inner{max-width:760px;margin:0 auto;background:linear-gradient(160deg,#1a0a35 0%,#170B40 100%);border-radius:28px;padding:50px 40px;position:relative;overflow:hidden;box-shadow:0 30px 80px rgba(124,58,237,.2)}
-.eva-soon-inner::before{content:'';position:absolute;width:300px;height:300px;background:radial-gradient(circle,rgba(124,58,237,.4),transparent);top:-100px;right:-50px;filter:blur(60px)}
-.eva-soon-inner::after{content:'';position:absolute;width:250px;height:250px;background:radial-gradient(circle,rgba(236,72,153,.3),transparent);bottom:-80px;left:-50px;filter:blur(60px)}
+/* Eva IA - showcase */
+.eva-soon{padding:95px 4%;background:linear-gradient(180deg,#fff 0%,#F8F5FF 48%,#fff 100%);position:relative;overflow:hidden}
+.eva-soon::before{content:'';position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,.16),transparent 65%);top:-220px;right:-160px;pointer-events:none}
+.eva-soon::after{content:'';position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(6,182,212,.14),transparent 68%);bottom:-180px;left:-130px;pointer-events:none}
+.eva-soon-inner{max-width:1180px;margin:0 auto;background:linear-gradient(145deg,#0A0514 0%,#170B40 48%,#071D2D 100%);border:1px solid rgba(167,139,250,.2);border-radius:28px;padding:44px;position:relative;overflow:hidden;box-shadow:0 34px 90px rgba(36,14,82,.28)}
+.eva-soon-inner::before{content:'';position:absolute;width:360px;height:360px;background:radial-gradient(circle,rgba(124,58,237,.42),transparent 68%);top:-120px;right:12%;filter:blur(54px)}
+.eva-soon-inner::after{content:'';position:absolute;width:320px;height:320px;background:radial-gradient(circle,rgba(236,72,153,.26),transparent 70%);bottom:-120px;left:8%;filter:blur(58px)}
+.eva-soon-layout{display:grid;grid-template-columns:1.02fr .98fr;gap:42px;align-items:center;position:relative;z-index:1}
 .eva-soon-content{position:relative;z-index:1}
-.eva-soon-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#F59E0B,#EC4899);color:white;padding:6px 16px;border-radius:50px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:18px;box-shadow:0 6px 18px rgba(236,72,153,.3)}
-.eva-soon h2{font-family:'Sora',sans-serif;font-size:clamp(26px,3vw,38px);font-weight:800;color:white;line-height:1.2;margin-bottom:14px}
-.eva-soon h2 span{background:linear-gradient(135deg,#A78BFA,#EC4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.eva-soon p{font-size:15px;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:24px;max-width:540px;margin-left:auto;margin-right:auto}
-.eva-soon-feats{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:30px}
-.eva-soon-feat{background:rgba(255,255,255,.06);border:1px solid rgba(167,139,250,.2);border-radius:50px;padding:8px 16px;font-size:12px;color:rgba(255,255,255,.85);font-weight:500}
-.eva-soon-cta{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#7C3AED,#EC4899);color:white;padding:13px 28px;border-radius:50px;font-family:'Sora',sans-serif;font-weight:700;font-size:14px;text-decoration:none;box-shadow:0 8px 24px rgba(124,58,237,.4);transition:all .25s}
-.eva-soon-cta:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(124,58,237,.55)}
+.eva-soon-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(167,139,250,.28);color:#E9D5FF;padding:7px 15px;border-radius:50px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.1px;margin-bottom:18px;box-shadow:0 10px 28px rgba(0,0,0,.16)}
+.eva-soon-badge::before{content:'';width:7px;height:7px;background:#10B981;border-radius:50%;box-shadow:0 0 0 6px rgba(16,185,129,.12);animation:pulse 2s infinite}
+.eva-soon h2{font-family:'Sora',sans-serif;font-size:clamp(30px,3.8vw,52px);font-weight:800;color:white;line-height:1.06;margin-bottom:16px}
+.eva-soon h2 span{background:linear-gradient(135deg,#A78BFA,#EC4899,#67E8F9);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;background-size:200%;animation:shimmer 3s linear infinite}
+.eva-soon p{font-size:16px;color:rgba(255,255,255,.72);line-height:1.75;margin-bottom:26px;max-width:610px}
+.eva-soon-feats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px}
+.eva-soon-feat{background:rgba(255,255,255,.055);border:1px solid rgba(167,139,250,.18);border-radius:14px;padding:13px 14px;font-size:13px;color:rgba(255,255,255,.86);font-weight:600;display:flex;align-items:center;gap:9px}
+.eva-soon-feat b{font-family:'Sora',sans-serif;color:white;font-size:12.5px}
+.eva-soon-cta{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#7C3AED,#EC4899);color:white;padding:15px 26px;border-radius:50px;font-family:'Sora',sans-serif;font-weight:800;font-size:14px;text-decoration:none;box-shadow:0 12px 34px rgba(124,58,237,.42);transition:all .25s}
+.eva-soon-cta:hover{transform:translateY(-2px);box-shadow:0 18px 44px rgba(124,58,237,.58)}
+.eva-proof{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:22px;color:rgba(255,255,255,.48);font-size:12px}
+.eva-proof strong{font-family:'Sora',sans-serif;color:white;font-size:22px}
+.eva-phone-wrap{display:flex;justify-content:center;position:relative}
+.eva-phone-glow{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(236,72,153,.28),transparent 68%);top:50%;left:50%;transform:translate(-50%,-50%);filter:blur(24px)}
+.eva-phone{width:min(100%,360px);background:#0D1020;border:1px solid rgba(255,255,255,.12);border-radius:30px;padding:14px;box-shadow:0 32px 82px rgba(0,0,0,.46),0 0 0 8px rgba(255,255,255,.035);position:relative;z-index:1;animation:float 7s ease-in-out infinite}
+.eva-phone-top{height:42px;display:flex;align-items:center;justify-content:space-between;padding:0 8px;color:white;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:12px}
+.eva-agent{display:flex;align-items:center;gap:9px;font-family:'Sora',sans-serif;font-weight:800;font-size:13px}
+.eva-avatar{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#7C3AED,#EC4899);display:flex;align-items:center;justify-content:center;color:white}
+.eva-status{font-size:10px;color:#6EE7B7;font-weight:700}
+.eva-chat{display:flex;flex-direction:column;gap:10px;padding:8px}
+.eva-bubble{max-width:88%;border-radius:16px;padding:11px 13px;font-size:12.5px;line-height:1.45;box-shadow:0 8px 20px rgba(0,0,0,.12)}
+.eva-bubble.client{align-self:flex-start;background:#1F2937;color:#E5E7EB;border-bottom-left-radius:5px}
+.eva-bubble.eva{align-self:flex-end;background:linear-gradient(135deg,#7C3AED,#9333EA);color:white;border-bottom-right-radius:5px}
+.eva-quick{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px}
+.eva-quick span{border:1px solid rgba(167,139,250,.22);background:rgba(255,255,255,.055);border-radius:12px;padding:9px;color:#C4B5FD;font-size:11px;font-weight:700;text-align:center}
+.eva-mini-metric{margin-top:12px;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.24);border-radius:16px;padding:12px;color:#A7F3D0;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.eva-mini-metric strong{font-family:'Sora',sans-serif;color:white;font-size:18px}
 
 /* Gestão completa - 4 cards detalhados */
 .gestao-section{padding:90px 4%;background:linear-gradient(160deg,#FAFAFC,#F0EBFF)}
@@ -471,12 +493,16 @@ footer{padding:54px 4% 36px;background:#060210}
 
   /* Eva soon */
   .eva-soon{padding:50px 4%}
-  .eva-soon-inner{padding:40px 22px}
+  .eva-soon-inner{padding:34px 20px;border-radius:22px}
+  .eva-soon-layout{grid-template-columns:1fr;gap:30px}
   .eva-soon h2{font-size:clamp(22px,5.5vw,30px)}
   .eva-soon p{font-size:14px}
-  .eva-soon-feats{gap:8px;margin-bottom:24px}
-  .eva-soon-feat{font-size:11px;padding:6px 12px}
+  .eva-soon-feats{grid-template-columns:1fr 1fr;gap:8px;margin-bottom:24px}
+  .eva-soon-feat{font-size:11px;padding:10px 11px}
   .eva-soon-cta{padding:12px 22px;font-size:13px}
+  .eva-phone{max-width:320px;border-radius:26px}
+  .eva-proof{gap:10px}
+  .eva-proof strong{font-size:18px}
 
   /* Features (modulos) */
   .features{padding:60px 4%}
@@ -565,6 +591,9 @@ footer{padding:54px 4% 36px;background:#060210}
 
   .eva-soon-inner{padding:32px 18px;border-radius:20px}
   .eva-soon-feats{gap:6px}
+  .eva-soon-feat{font-size:10.5px}
+  .eva-phone{max-width:100%;padding:12px}
+  .eva-bubble{font-size:12px}
 
   .price-card{padding:24px 18px}
   .pa{font-size:38px}
@@ -581,6 +610,119 @@ footer{padding:54px 4% 36px;background:#060210}
   .modules-grid{grid-template-columns:1fr 1fr;gap:8px}
   .hero h1{font-size:24px}
   .nav-link-cli{display:none}
+}
+
+.eva-soon-old,.pricing-old{display:none!important}
+
+.eva-section{padding:95px 4%;background:linear-gradient(180deg,#0A0514 0%,#130D28 100%);position:relative;overflow:hidden}
+.eva-section::before{content:'';position:absolute;bottom:-300px;right:-200px;width:700px;height:700px;background:radial-gradient(ellipse,rgba(236,72,153,.08) 0%,transparent 65%);pointer-events:none}
+.eva-section-header{text-align:center;margin:0 auto 58px;max-width:760px;position:relative;z-index:1}
+.eva-section-label{display:inline-flex;align-items:center;gap:8px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:100px;padding:6px 16px;font-size:12px;font-weight:800;color:#A78BFA;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+.eva-section-label::before{content:'🤖'}
+.eva-section-header h2{font-family:'Sora',sans-serif;font-size:clamp(30px,4vw,50px);font-weight:800;line-height:1.1;color:white;margin-bottom:14px}
+.eva-section-header h2 span{background:linear-gradient(135deg,#A78BFA,#EC4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.eva-section-header p{color:#8B7BAE;font-size:17px;line-height:1.65}
+.eva-demo-wrapper{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;position:relative;z-index:1}
+.whatsapp-phone{background:#111B21;border-radius:24px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.05)}
+.wp-header{background:#1F2C34;padding:14px 16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(255,255,255,.05)}
+.wp-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#7C3AED,#EC4899);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;font-family:'Sora',sans-serif;flex-shrink:0}
+.wp-info .name{font-size:15px;font-weight:700;color:#E9EDEF}
+.wp-info .status{font-size:12px;color:#8696A0}
+.eva-badge-inline{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,rgba(124,58,237,.2),rgba(236,72,153,.2));border:1px solid rgba(167,139,250,.25);color:#A78BFA;padding:4px 12px;border-radius:100px;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
+.eva-badge-inline::before{content:'✦';font-size:8px}
+.step-progress{display:flex;gap:6px;margin-bottom:2px}
+.step-dot{height:3px;border-radius:2px;background:rgba(255,255,255,.1);flex:1;transition:background .5s}
+.step-dot.active{background:#A78BFA}
+.step-dot.done{background:#34D399}
+.wp-messages{padding:16px;min-height:440px;max-height:440px;overflow-y:auto;display:flex;flex-direction:column;gap:6px;background:#0B141A;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.828-1.415 1.415L51.8 0h2.827zM5.373 0l-.83.828L5.96 2.243 8.2 0H5.374zM48.97 0l3.657 3.657-1.414 1.414L46.143 0h2.828zM11.03 0L7.372 3.657 8.787 5.07 13.857 0H11.03zm32.284 0L49.8 6.485 48.384 7.9l-7.9-7.9h2.83zM16.686 0L10.2 6.485 11.616 7.9l7.9-7.9h-2.83zM22.343 0L13.857 8.485 15.272 9.9l9.9-9.9h-2.83zM32 0l-3.486 3.485 1.414 1.415L33.414 1.4 32 0zm-4.657 0L18.857 8.485l1.415 1.414 9.9-9.9h-2.83zM60 5.373l-.828.83-1.415-1.415L59.172 2.544 60 5.373zm0 5.657l-.828.828-4.243-4.243 1.415-1.414L60 11.03zm0 5.657l-.828.828-9.9-9.9 1.414-1.414L60 16.687zM0 54.627l.828-.83 1.415 1.415L.828 57.456 0 54.627zm0-5.657l.828-.828 4.243 4.243-1.415 1.414L0 48.97zm0-5.657l.828-.828 9.9 9.9-1.414 1.414L0 43.313z' fill='%23ffffff' fill-opacity='0.015' fill-rule='evenodd'/%3E%3C/svg%3E")}
+.msg{max-width:78%;padding:8px 12px;border-radius:8px;font-size:13.5px;line-height:1.5;position:relative;opacity:0;transition:opacity .4s ease}
+.msg.visible{opacity:1}
+.msg.received{background:#202C33;color:#E9EDEF;align-self:flex-start;border-top-left-radius:2px}
+.msg.sent{background:#005C4B;color:#E9EDEF;align-self:flex-end;border-top-right-radius:2px}
+.msg .time{font-size:10px;color:#8696A0;float:right;margin-left:10px;margin-top:2px}
+.msg.sent .time::after{content:' ✓✓';color:#53BDEB}
+.typing-indicator{background:#202C33;color:#8696A0;padding:10px 14px;border-radius:8px;border-top-left-radius:2px;font-size:13px;align-self:flex-start;display:none}
+.typing-indicator.visible{display:flex;align-items:center;gap:6px}
+.typing-dots span{display:inline-block;width:6px;height:6px;background:#8696A0;border-radius:50%;animation:typingBounce 1.2s infinite}
+.typing-dots span:nth-child(2){animation-delay:.2s}
+.typing-dots span:nth-child(3){animation-delay:.4s}
+@keyframes typingBounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+.demo-label{text-align:center;font-size:12px;color:#8B7BAE;padding:8px 16px;background:rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;gap:8px}
+.replay-btn{display:inline-flex;align-items:center;gap:8px;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.25);color:#A78BFA;padding:10px 20px;border-radius:100px;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif}
+.replay-btn:hover{background:rgba(124,58,237,.2);border-color:#A78BFA}
+.eva-crm-panel{display:flex;flex-direction:column;gap:20px}
+.eva-crm-card,.agenda-notification{background:#1E1535;border:1px solid rgba(167,139,250,.15);border-radius:16px;overflow:hidden}
+.eva-crm-header{padding:14px 20px;border-bottom:1px solid rgba(167,139,250,.15);display:flex;align-items:center;gap:10px;background:rgba(124,58,237,.05)}
+.eva-crm-title{font-family:'Sora',sans-serif;font-size:14px;font-weight:800;color:#fff}
+.eva-crm-dot{width:8px;height:8px;border-radius:50%;background:#34D399;animation:pulse 2s infinite}
+.eva-crm-kanban{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:16px}
+.eva-crm-col{background:rgba(255,255,255,.03);border-radius:10px;padding:10px 8px;min-height:120px}
+.eva-crm-col-label{font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#8B7BAE;margin-bottom:8px;text-align:center}
+.eva-crm-lead{background:#241A3A;border:1px solid rgba(167,139,250,.15);border-radius:8px;padding:8px 10px;margin-bottom:6px;font-size:12px;transition:all .5s cubic-bezier(.34,1.56,.64,1)}
+.eva-crm-lead .lead-name{font-weight:700;color:#fff;font-size:12px;margin-bottom:3px}
+.lead-tag{font-size:10px;padding:2px 6px;border-radius:100px;display:inline-block}
+.tag-hot{background:rgba(239,68,68,.15);color:#FCA5A5}
+.tag-warm{background:rgba(245,158,11,.15);color:#FCD34D}
+.tag-booked{background:rgba(124,58,237,.2);color:#A78BFA}
+.tag-client{background:rgba(16,185,129,.15);color:#34D399}
+.eva-crm-lead.highlighted{border-color:#7C3AED;background:rgba(124,58,237,.12);box-shadow:0 0 16px rgba(124,58,237,.2)}
+.eva-crm-lead.moving{transform:scale(.95);opacity:.5}
+.eva-crm-status{padding:0 16px 14px;font-size:11px;color:#8B7BAE;display:flex;align-items:center;gap:6px}
+.eva-crm-status span{width:6px;height:6px;background:#8B7BAE;border-radius:50%;display:inline-block;flex-shrink:0}
+.agenda-notification{opacity:0;transform:translateY(10px);transition:all .5s ease}
+.agenda-notification.visible{opacity:1;transform:translateY(0)}
+.agenda-header{padding:12px 20px;background:rgba(16,185,129,.08);border-bottom:1px solid rgba(16,185,129,.15);display:flex;align-items:center;gap:10px}
+.agenda-title{font-family:'Sora',sans-serif;font-size:13px;font-weight:800;color:#34D399}
+.agenda-body{padding:16px 20px;display:flex;flex-direction:column;gap:8px}
+.agenda-row{display:flex;justify-content:space-between;align-items:center;font-size:13px;gap:12px}
+.agenda-label{color:#8B7BAE}
+.agenda-value{color:#fff;font-weight:700;text-align:right}
+.agenda-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.2);color:#34D399;padding:4px 12px;border-radius:100px;font-size:11px;font-weight:800;margin-top:4px;text-align:right}
+.eva-demo-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.eva-demo-stats div{background:#1E1535;border:1px solid rgba(167,139,250,.15);border-radius:14px;padding:18px}
+.eva-demo-stats strong{display:block;font-size:28px;font-family:'Sora',sans-serif;font-weight:800;color:#fff;margin-bottom:4px}
+.eva-demo-stats span{font-size:12px;color:#8B7BAE}
+
+.pricing-new .section-title span{background:linear-gradient(135deg,#A78BFA,#EC4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.pricing-grid-new{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;max-width:1120px;margin:0 auto;align-items:start}
+.plan-card-new{background:#1E1535;border:1px solid rgba(167,139,250,.15);border-radius:20px;padding:32px 28px;position:relative;transition:transform .3s,border-color .3s;min-height:100%}
+.plan-card-new:hover{transform:translateY(-4px);border-color:rgba(167,139,250,.35)}
+.plan-card-new.featured{border-color:#7C3AED;background:linear-gradient(135deg,#1E1535,#2A1650)}
+.plan-card-new.combo{border-color:#EC4899;background:linear-gradient(135deg,#1E1535,#2A1040)}
+.plan-badge-new{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#7C3AED,#EC4899);color:#fff;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 16px;border-radius:100px;white-space:nowrap}
+.plan-icon-new{font-size:28px;margin-bottom:12px}
+.plan-name-new{font-family:'Sora',sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:6px}
+.plan-desc-new{font-size:13px;color:#8B7BAE;margin-bottom:24px;line-height:1.5;min-height:40px}
+.plan-price-new{margin-bottom:28px}
+.plan-price-new span{font-size:14px;color:#8B7BAE;vertical-align:top;line-height:2.5}
+.plan-price-new strong{font-family:'Sora',sans-serif;font-size:42px;font-weight:800;color:#fff;line-height:1}
+.plan-price-new b{font-size:24px;color:#fff;font-family:'Sora',sans-serif;font-weight:800}
+.plan-price-new em{display:block;font-style:normal;font-size:13px;color:#8B7BAE;margin-top:4px}
+.plan-price-new.gradient strong,.plan-price-new.combo-price strong{background:linear-gradient(135deg,#A78BFA,#EC4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.plan-price-new small{display:block;margin-bottom:4px}
+.plan-price-new del{font-size:15px;color:#8B7BAE;margin-right:8px}
+.plan-price-new mark{background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.3);color:#34D399;font-size:11px;font-weight:800;padding:2px 8px;border-radius:100px}
+.plan-features-new{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.plan-features-new li{font-size:13.5px;color:#E2D9F3;display:flex;align-items:flex-start;gap:10px;line-height:1.4}
+.plan-features-new li span{color:#34D399;font-size:14px;flex-shrink:0;margin-top:1px}
+.plan-features-new li.star span{color:#A78BFA}
+.plan-features-new li.off{color:#8B7BAE}
+.plan-features-new li.off span{color:#8B7BAE}
+.plan-cta-new{display:block;width:100%;padding:14px;border-radius:12px;font-size:14px;font-weight:800;text-align:center;text-decoration:none;transition:all .2s}
+.plan-cta-new.outline{background:transparent;border:1.5px solid rgba(167,139,250,.15);color:#E2D9F3}
+.plan-cta-new.outline:hover{border-color:#A78BFA;color:#fff}
+.plan-cta-new.primary{background:linear-gradient(135deg,#7C3AED,#5B21B6);color:#fff;box-shadow:0 4px 20px rgba(124,58,237,.35)}
+.plan-cta-new.combo-cta{background:linear-gradient(135deg,#7C3AED,#EC4899);color:#fff;box-shadow:0 4px 20px rgba(236,72,153,.3)}
+
+@media(max-width:960px){
+  .eva-demo-wrapper{grid-template-columns:1fr}
+  .eva-crm-kanban{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .eva-section{padding:60px 4%}
+  .wp-messages{min-height:380px;max-height:380px}
+  .eva-demo-stats{grid-template-columns:1fr}
+  .agenda-row{align-items:flex-start}
 }
 </style>
 </head>
@@ -998,22 +1140,172 @@ footer{padding:54px 4% 36px;background:#060210}
   </div>
 </section>
 
-<section class="eva-soon">
-  <div class="eva-soon-inner">
-    <div class="eva-soon-content">
-      <div class="eva-soon-badge">🚀 Em desenvolvimento · Lista de espera</div>
-      <h2>Eva — sua <span>secretária digital</span> está chegando</h2>
-      <p>Estamos finalizando uma IA conversacional que vai atender seu WhatsApp 24h, agendar sozinha e fazer follow-up de leads — sem você levantar um dedo. Já está em testes finais com clínicas parceiras.</p>
-      <div class="eva-soon-feats">
-        <div class="eva-soon-feat">💬 Atende WhatsApp 24h</div>
-        <div class="eva-soon-feat">📅 Agenda sozinha</div>
-        <div class="eva-soon-feat">🎯 Classifica leads</div>
-        <div class="eva-soon-feat">🔄 Follow-up automático</div>
-        <div class="eva-soon-feat">🚨 Escala pra humano</div>
+<section class="eva-section" id="eva-demo">
+  <div class="eva-section-header">
+    <span class="eva-section-label">Eva em ação</span>
+    <h2>Veja a Eva <span>convertendo</span> ao vivo</h2>
+    <p>Do primeiro "oi" até o agendamento confirmado e o CRM atualizado, sem um clique humano.</p>
+  </div>
+
+  <div class="eva-demo-wrapper">
+    <div>
+      <div class="whatsapp-phone">
+        <div class="wp-header">
+          <div class="wp-avatar">E</div>
+          <div class="wp-info">
+            <div class="name">Eva · Clínica Sarah Pina</div>
+            <div class="status" id="wp-status">online</div>
+          </div>
+          <div style="margin-left:auto">
+            <span class="eva-badge-inline">IA Ativa</span>
+          </div>
+        </div>
+
+        <div style="padding:8px 16px;background:#0B141A">
+          <div class="step-progress" id="step-progress">
+            <div class="step-dot" id="sd1"></div>
+            <div class="step-dot" id="sd2"></div>
+            <div class="step-dot" id="sd3"></div>
+            <div class="step-dot" id="sd4"></div>
+            <div class="step-dot" id="sd5"></div>
+            <div class="step-dot" id="sd6"></div>
+            <div class="step-dot" id="sd7"></div>
+          </div>
+        </div>
+
+        <div class="wp-messages" id="wp-messages">
+          <div class="typing-indicator" id="typing">
+            <span>Eva está digitando</span>
+            <div class="typing-dots"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+
+        <div class="demo-label">
+          <span>🎬</span>
+          <span id="demo-label-text">Simulação automática — Eva conversando com paciente real</span>
+        </div>
       </div>
-      <a href="https://wa.me/5534991805722?text=Ol%C3%A1%21+Quero+entrar+na+lista+de+espera+da+Eva%2C+a+secret%C3%A1ria+digital+do+Clinike+%E2%9C%A8" target="_blank" rel="noopener" class="eva-soon-cta">
-        ✨ Quero ser avisado quando a Eva for lançada
-      </a>
+
+      <div style="text-align:center;margin-top:16px">
+        <button class="replay-btn" id="replay-btn" onclick="startEvaDemo()" style="display:none">↺ Assistir novamente</button>
+      </div>
+    </div>
+
+    <div class="eva-crm-panel">
+      <div class="eva-crm-card">
+        <div class="eva-crm-header">
+          <div class="eva-crm-dot"></div>
+          <div class="eva-crm-title">CRM — Funil de Leads</div>
+          <span style="margin-left:auto;font-size:11px;color:#8B7BAE">Ao vivo</span>
+        </div>
+        <div class="eva-crm-kanban">
+          <div class="eva-crm-col">
+            <div class="eva-crm-col-label">Novo Lead</div>
+            <div class="eva-crm-lead highlighted" id="eva-lead-card">
+              <div class="lead-name">Larissa M.</div>
+              <span class="lead-tag tag-hot">🔥 Quente</span>
+            </div>
+            <div class="eva-crm-lead">
+              <div class="lead-name">Beatriz S.</div>
+              <span class="lead-tag tag-warm">☀️ Morno</span>
+            </div>
+          </div>
+          <div class="eva-crm-col" id="eva-col-conversa">
+            <div class="eva-crm-col-label">Em Conversa</div>
+            <div class="eva-crm-lead">
+              <div class="lead-name">Juliana R.</div>
+              <span class="lead-tag tag-hot">🔥 Quente</span>
+            </div>
+          </div>
+          <div class="eva-crm-col" id="eva-col-agendado">
+            <div class="eva-crm-col-label">Agendado</div>
+            <div class="eva-crm-lead">
+              <div class="lead-name">Fernanda M.</div>
+              <span class="lead-tag tag-booked">📅 Agendado</span>
+            </div>
+          </div>
+          <div class="eva-crm-col" id="eva-col-cliente">
+            <div class="eva-crm-col-label">Cliente</div>
+            <div class="eva-crm-lead">
+              <div class="lead-name">Camila S.</div>
+              <span class="lead-tag tag-client">✅ Cliente</span>
+            </div>
+          </div>
+        </div>
+        <div class="eva-crm-status" id="eva-crm-status-text">
+          <span></span>Aguardando conversa...
+        </div>
+      </div>
+
+      <div class="agenda-notification" id="eva-agenda-notif">
+        <div class="agenda-header">
+          <span>📅</span>
+          <div class="agenda-title">Agendamento confirmado pela Eva</div>
+        </div>
+        <div class="agenda-body">
+          <div class="agenda-row"><span class="agenda-label">Paciente</span><span class="agenda-value">Larissa Mendes</span></div>
+          <div class="agenda-row"><span class="agenda-label">Procedimento</span><span class="agenda-value">Preenchimento de olheira</span></div>
+          <div class="agenda-row"><span class="agenda-label">Profissional</span><span class="agenda-value">Dra. Sarah Pina</span></div>
+          <div class="agenda-row"><span class="agenda-label">Data & Horário</span><span class="agenda-value">Quarta-feira · 10h00</span></div>
+          <div class="agenda-row"><span class="agenda-label">Status</span><span class="agenda-badge">✓ Confirmado · sem intervenção humana</span></div>
+        </div>
+      </div>
+
+      <div class="eva-demo-stats">
+        <div><strong>24h</strong><span>Atendimento ininterrupto</span></div>
+        <div><strong>0</strong><span>Cliques humanos necessários</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="eva-soon eva-soon-old" aria-hidden="true">
+  <div class="eva-soon-inner">
+    <div class="eva-soon-layout">
+      <div class="eva-soon-content">
+        <div class="eva-soon-badge">Eva IA · lista de espera aberta</div>
+        <h2>A secretária digital que transforma conversa em <span>agenda cheia</span></h2>
+        <p>Eva atende seu WhatsApp em segundos, entende o interesse da paciente, sugere horários, registra o lead no CRM e chama sua equipe só quando precisa de toque humano. Tudo conectado ao Clinike, com contexto de agenda, procedimentos e histórico.</p>
+        <div class="eva-soon-feats">
+          <div class="eva-soon-feat">💬 <b>Atendimento 24h</b></div>
+          <div class="eva-soon-feat">📅 <b>Agendamento guiado</b></div>
+          <div class="eva-soon-feat">🎯 <b>Lead quente no CRM</b></div>
+          <div class="eva-soon-feat">🔄 <b>Follow-up inteligente</b></div>
+          <div class="eva-soon-feat">🚨 <b>Escala para humano</b></div>
+          <div class="eva-soon-feat">✨ <b>Tom da sua clínica</b></div>
+        </div>
+        <a href="https://wa.me/5534991805722?text=Ol%C3%A1%21+Quero+entrar+na+lista+de+espera+da+Eva%2C+a+secret%C3%A1ria+digital+do+Clinike+%E2%9C%A8" target="_blank" rel="noopener" class="eva-soon-cta">
+        ✨ Quero ser avisado sobre a Eva
+        </a>
+        <div class="eva-proof">
+          <span><strong>+38%</strong> mais agendamentos</span>
+          <span><strong>24h</strong> respondendo leads</span>
+          <span><strong>0</strong> oportunidade esquecida</span>
+        </div>
+      </div>
+      <div class="eva-phone-wrap" aria-label="Simulação de conversa com a Eva">
+        <div class="eva-phone-glow"></div>
+        <div class="eva-phone">
+          <div class="eva-phone-top">
+            <div class="eva-agent"><span class="eva-avatar">E</span> Eva Clinike</div>
+            <span class="eva-status">online</span>
+          </div>
+          <div class="eva-chat">
+            <div class="eva-bubble client">Oi! Queria saber valores para botox e se tem horário essa semana.</div>
+            <div class="eva-bubble eva">Oi, Ana! Claro. Posso te mostrar opções com a Dra. Sarah. Você prefere manhã ou tarde?</div>
+            <div class="eva-bubble client">Tarde fica melhor.</div>
+            <div class="eva-bubble eva">Tenho terça às 15h30 ou quinta às 17h. Quer que eu reserve uma avaliação para você?</div>
+            <div class="eva-quick">
+              <span>Terça 15h30</span>
+              <span>Quinta 17h</span>
+            </div>
+            <div class="eva-mini-metric">
+              <span>Lead movido para Agendado</span>
+              <strong>CRM</strong>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1151,7 +1443,101 @@ footer{padding:54px 4% 36px;background:#060210}
   </div>
 </section>
 
-<section class="pricing" id="planos">
+<section class="pricing pricing-new" id="planos">
+  <div class="price-inner">
+    <div class="price-header">
+      <div class="section-chip">💳 Planos e preços</div>
+      <h2 class="section-title">Simples e sem <span>surpresas</span></h2>
+      <p class="section-sub">Escolha o plano ideal. Cancele quando quiser, sem fidelidade.</p>
+    </div>
+    <div class="pricing-grid-new">
+      <div class="plan-card-new">
+        <div class="plan-icon-new">🏥</div>
+        <div class="plan-name-new">Clinike Basic</div>
+        <div class="plan-desc-new">Gestão completa sem automações. Ideal pra começar com o pé direito.</div>
+        <div class="plan-price-new"><span>R$</span><strong>139</strong><b>,90</b><em>/mês</em></div>
+        <ul class="plan-features-new">
+          <li><span>✓</span>Agenda completa</li>
+          <li><span>✓</span>Gestão de pacientes</li>
+          <li><span>✓</span>Prontuário eletrônico</li>
+          <li><span>✓</span>Anamneses digitais</li>
+          <li><span>✓</span>Financeiro básico</li>
+          <li><span>✓</span>Estoque</li>
+          <li><span>✓</span>Lista de espera</li>
+          <li class="off"><span>✗</span>Automações de venda</li>
+          <li class="off"><span>✗</span>CRM Kanban</li>
+          <li class="off"><span>✗</span>WhatsApp integrado</li>
+          <li class="off"><span>✗</span>Eva — IA WhatsApp</li>
+        </ul>
+        <a href="https://wa.me/5534991805722?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+o+plano+Basic+do+Clinike" target="_blank" rel="noopener" class="plan-cta-new outline">Falar com especialista</a>
+      </div>
+
+      <div class="plan-card-new featured">
+        <div class="plan-badge-new">⚡ Mais popular</div>
+        <div class="plan-icon-new">🚀</div>
+        <div class="plan-name-new">Clinike Professional</div>
+        <div class="plan-desc-new">Com automações que vendem por você — aniversário, NPS, recall e mais.</div>
+        <div class="plan-price-new gradient"><span>R$</span><strong>189</strong><b>,90</b><em>/mês</em></div>
+        <ul class="plan-features-new">
+          <li class="star"><span>★</span><strong>6 automações ativas</strong></li>
+          <li class="star"><span>★</span><strong>CRM Kanban com funil</strong></li>
+          <li class="star"><span>★</span><strong>WhatsApp integrado</strong></li>
+          <li class="star"><span>★</span><strong>NPS pós-atendimento</strong></li>
+          <li><span>✓</span>Agenda + pacientes</li>
+          <li><span>✓</span>Prontuário + anamnese</li>
+          <li><span>✓</span>Financeiro + DRE completo</li>
+          <li><span>✓</span>Estoque + devedores</li>
+          <li><span>✓</span>Documentos digitais</li>
+          <li><span>✓</span>Relatórios & dashboards</li>
+          <li class="off"><span>✗</span>Eva — IA WhatsApp</li>
+        </ul>
+        <a href="https://wa.me/5534991805722?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+o+plano+Professional+do+Clinike" target="_blank" rel="noopener" class="plan-cta-new primary">Falar com especialista</a>
+      </div>
+
+      <div class="plan-card-new">
+        <div class="plan-icon-new">🤖</div>
+        <div class="plan-name-new">Eva — IA WhatsApp</div>
+        <div class="plan-desc-new">Apenas a Eva. Conecta ao seu sistema atual e atende 24h no WhatsApp.</div>
+        <div class="plan-price-new"><span>R$</span><strong>400</strong><em>/mês · add-on</em></div>
+        <ul class="plan-features-new">
+          <li class="star"><span>★</span><strong>Atende WhatsApp 24h</strong></li>
+          <li class="star"><span>★</span><strong>Agenda sozinha</strong></li>
+          <li class="star"><span>★</span><strong>Classifica e move leads no CRM</strong></li>
+          <li class="star"><span>★</span><strong>Follow-up automático</strong></li>
+          <li><span>✓</span>Escala pra atendimento humano</li>
+          <li><span>✓</span>Responde áudios e imagens</li>
+          <li><span>✓</span>Persona personalizada por clínica</li>
+          <li><span>✓</span>Histórico salvo por paciente</li>
+        </ul>
+        <a href="https://wa.me/5534991805722?text=Ol%C3%A1%21+Quero+conhecer+a+Eva+IA+para+minha+cl%C3%ADnica" target="_blank" rel="noopener" class="plan-cta-new outline">Quero a Eva</a>
+      </div>
+
+      <div class="plan-card-new combo">
+        <div class="plan-badge-new">🔥 Melhor custo-benefício</div>
+        <div class="plan-icon-new">✨</div>
+        <div class="plan-name-new">Combo Completo</div>
+        <div class="plan-desc-new">Professional + Eva. Tudo junto com desconto — sua clínica no automático total.</div>
+        <div class="plan-price-new combo-price">
+          <small><del>R$ 589,90</del><mark>-15%</mark></small>
+          <span>R$</span><strong>499</strong><b>,90</b><em>/mês · tudo incluso</em>
+        </div>
+        <ul class="plan-features-new">
+          <li class="star"><span>★</span><strong>Tudo do Professional</strong></li>
+          <li class="star"><span>★</span><strong>Eva 24h no WhatsApp</strong></li>
+          <li class="star"><span>★</span><strong>CRM + Eva movendo leads sozinha</strong></li>
+          <li class="star"><span>★</span><strong>Agendamento automático pela IA</strong></li>
+          <li><span>✓</span>6 automações ativas</li>
+          <li><span>✓</span>NPS, recall, lista de espera</li>
+          <li><span>✓</span>Financeiro + DRE + devedores</li>
+          <li><span>✓</span>Suporte prioritário</li>
+        </ul>
+        <a href="https://wa.me/5534991805722?text=Ol%C3%A1%21+Quero+o+Combo+Completo+do+Clinike+com+a+Eva" target="_blank" rel="noopener" class="plan-cta-new combo-cta">Quero o Combo Completo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing pricing-old" id="planos-old" aria-hidden="true">
   <div class="price-inner">
     <div class="price-header">
       <div class="section-chip">Planos e preços</div>
@@ -1233,7 +1619,7 @@ footer{padding:54px 4% 36px;background:#060210}
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">A Eva (IA) já está disponível?<span class="faq-ico">+</span></div>
-        <div class="faq-a">A Eva está em fase final de desenvolvimento e testes com clínicas parceiras. Em breve será liberada pra todos os clientes do plano Professional. Se quiser ser avisado no lançamento (e talvez entrar como tester antecipado), fala com nossa equipe pelo WhatsApp.</div>
+        <div class="faq-a">A Eva está em fase final de desenvolvimento. Em breve será liberada para os clientes do plano Professional e para o Combo Completo. Se quiser ser avisado no lançamento, fale com nossa equipe pelo WhatsApp.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">Preciso instalar alguma coisa?<span class="faq-ico">+</span></div>
@@ -1354,7 +1740,7 @@ document.querySelectorAll('.mod-card,.test-card,.prob-card,.sol-card,.price-card
 
 <script>
 const modData = {
-  "Eva — Secretária IA": ["✨", "EM BREVE: Eva é uma IA conversacional treinada pra clínicas de estética. Vai atender WhatsApp 24h por dia, agendar consulta sozinha, fazer follow-up automático e escalar pra humano quando o caso pedir. Está em fase final de testes — entre em contato pra entrar na lista de espera."],
+  "Eva — Secretária IA": ["✨", "EM BREVE: Eva é uma IA conversacional treinada pra clínicas de estética. Vai atender WhatsApp 24h por dia, agendar consulta sozinha, fazer follow-up automático e escalar pra humano quando o caso pedir. Está em fase final de desenvolvimento — entre em contato para entrar na lista de interesse."],
   "CRM Kanban": ["🎯", "Funil de vendas com 5 colunas (Novo Lead → Em Conversa → Agendado → Cliente / Perdido). Drag-and-drop pra mover cards. Cores automáticas de prioridade (quente/morno/frio). Integrado com Eva — quando ela agenda, o card move sozinho."],
   "WhatsApp Profissional": ["💚", "Conexão direto com Evolution API. Conversas em tempo real, envio de áudio, foto, vídeo e documentos. Múltiplas atendentes podem operar ao mesmo tempo. Histórico completo persistido no sistema."],
   "Automações de Venda": ["🤖", "6 automações que vendem por você: aniversário automático, confirmação D-1 (24h antes), NPS pós-atendimento com captura de score 1-5, recall de inativas (>150 dias), lista de espera inteligente e lead → cliente automático. Templates editáveis com placeholders dinâmicos."],
@@ -1393,6 +1779,191 @@ document.addEventListener('keydown', function(e) {
     document.body.style.overflow = '';
   }
 });
+</script>
+
+<script>
+const evaMessages = [
+  { type: 'sent', text: 'Olá! Vim pelo Instagram, vi que vocês fazem preenchimento. Queria saber mais 😊', delay: 500 },
+  { type: 'typing', delay: 1200 },
+  { type: 'received', text: 'Oi! Eu sou a Eva, assistente virtual da Clínica Sarah Pina 🤍\n\nVou te ajudar com as informações e, se fizer sentido, já posso ver os horários disponíveis pra avaliação. Antes de tudo, qual é o seu nome?', delay: 2400, isEva: true },
+  { type: 'sent', text: 'Sou a Larissa! Tenho interesse em olheira, fico com muita cara de cansada', delay: 3600 },
+  { type: 'typing', delay: 5000 },
+  { type: 'received', text: 'Perfeito! O preenchimento de olheira é incrível — suaviza aquele aspecto cansado e devolve viço pro olhar ✨ A Dra. Sarah faz com técnica delicada e resultado muito natural.\n\nQual período funciona melhor pra você vir fazer a avaliação?', delay: 6500, isEva: true },
+  { type: 'sent', text: 'Quarta de manhã seria ótimo', delay: 7800 },
+  { type: 'typing', delay: 8500 },
+  { type: 'received', text: 'Ótimo! Na quarta a Dra. Sarah tem disponível:\n\n🕘 09h00\n🕙 10h00\n🕙 11h30\n\nQual horário prefere?', delay: 10000, isEva: true },
+  { type: 'sent', text: '10h tá perfeito!', delay: 11200 },
+  { type: 'typing', delay: 12000 },
+  { type: 'received', text: 'Confirmado! ✅\n\n📅 *Avaliação de Preenchimento*\n👩‍⚕️ Dra. Sarah Pina\n📆 Quarta-feira · 10h00\n📍 Clínica Sarah Pina\n\nVou te mandar o endereço e lembrete 24h antes 💜 Você confirma o agendamento?', delay: 13500, isEva: true },
+  { type: 'sent', text: 'Confirmo sim! Muito obrigada 😍', delay: 14800 },
+  { type: 'typing', delay: 15500 },
+  { type: 'received', text: 'Maravilhoso! Agendamento registrado 🎉\n\nTe esperamos na quarta. Se precisar de qualquer coisa antes, é só chamar aqui. A Dra. Sarah vai adorar te atender 🤍', delay: 17000, isEva: true }
+];
+
+let evaTimeouts = [];
+let evaDemoStarted = false;
+const evaDemoSpeed = 1.2;
+
+function clearEvaTimeouts(){
+  evaTimeouts.forEach(t => clearTimeout(t));
+  evaTimeouts = [];
+}
+
+function addEvaTimeout(fn, delay){
+  evaTimeouts.push(setTimeout(fn, Math.round(delay / evaDemoSpeed)));
+}
+
+function evaTime(){
+  const now = new Date();
+  return now.getHours().toString().padStart(2,'0') + ':' + now.getMinutes().toString().padStart(2,'0');
+}
+
+function resetEvaDemo(){
+  const messagesEl = document.getElementById('wp-messages');
+  if(!messagesEl) return;
+  messagesEl.innerHTML = '<div class="typing-indicator" id="typing"><span>Eva está digitando</span><div class="typing-dots"><span></span><span></span><span></span></div></div>';
+
+  for(let i = 1; i <= 7; i++){
+    const dot = document.getElementById('sd' + i);
+    if(dot) dot.className = 'step-dot';
+  }
+
+  const leadCard = document.getElementById('eva-lead-card');
+  const firstCol = document.querySelector('.eva-crm-col');
+  if(leadCard && firstCol){
+    leadCard.className = 'eva-crm-lead highlighted';
+    const tag = leadCard.querySelector('.lead-tag');
+    if(tag){
+      tag.className = 'lead-tag tag-hot';
+      tag.textContent = '🔥 Quente';
+    }
+    firstCol.insertBefore(leadCard, firstCol.children[1] || null);
+  }
+
+  const agenda = document.getElementById('eva-agenda-notif');
+  if(agenda) agenda.classList.remove('visible');
+
+  const status = document.getElementById('eva-crm-status-text');
+  if(status) status.innerHTML = '<span></span>Aguardando conversa...';
+
+  const replay = document.getElementById('replay-btn');
+  if(replay) replay.style.display = 'none';
+
+  const label = document.getElementById('demo-label-text');
+  if(label) label.textContent = 'Simulação automática — Eva conversando com paciente real';
+}
+
+function setEvaStep(step, state){
+  const dot = document.getElementById('sd' + step);
+  if(dot) dot.className = 'step-dot ' + state;
+}
+
+function updateEvaCRMStatus(text, color){
+  const status = document.getElementById('eva-crm-status-text');
+  if(status) status.innerHTML = `<span style="background:${color}"></span>${text}`;
+}
+
+function moveEvaLead(toColId, newTagClass, newTagText){
+  const leadCard = document.getElementById('eva-lead-card');
+  if(!leadCard) return;
+  leadCard.classList.add('moving');
+
+  addEvaTimeout(() => {
+    const targetCol = document.getElementById(toColId);
+    if(!targetCol) return;
+    leadCard.classList.remove('moving','highlighted');
+    const tag = leadCard.querySelector('.lead-tag');
+    if(tag){
+      tag.className = 'lead-tag ' + newTagClass;
+      tag.textContent = newTagText;
+    }
+    targetCol.insertBefore(leadCard, targetCol.children[1] || null);
+    leadCard.classList.add('highlighted');
+    addEvaTimeout(() => leadCard.classList.remove('highlighted'), 1500);
+  }, 600);
+}
+
+function startEvaDemo(){
+  clearEvaTimeouts();
+  resetEvaDemo();
+
+  const messagesEl = document.getElementById('wp-messages');
+  if(!messagesEl) return;
+  let stepCounter = 0;
+
+  function processMessage(index){
+    if(index >= evaMessages.length){
+      addEvaTimeout(() => {
+        const replay = document.getElementById('replay-btn');
+        const label = document.getElementById('demo-label-text');
+        if(replay) replay.style.display = 'inline-flex';
+        if(label) label.textContent = '✅ Concluído — 0 cliques humanos necessários';
+      }, 500);
+      return;
+    }
+
+    const msg = evaMessages[index];
+    addEvaTimeout(() => {
+      const typing = document.getElementById('typing');
+
+      if(msg.type === 'typing'){
+        if(typing) typing.classList.add('visible');
+        messagesEl.scrollTop = messagesEl.scrollHeight;
+        processMessage(index + 1);
+        return;
+      }
+
+      if(typing) typing.classList.remove('visible');
+
+      const div = document.createElement('div');
+      div.className = 'msg ' + msg.type;
+      const formattedText = msg.text.replace(/\n/g, '<br>').replace(/\*(.*?)\*/g, '<strong>$1</strong>');
+      div.innerHTML = formattedText + `<span class="time">${evaTime()}</span>`;
+      messagesEl.insertBefore(div, typing);
+      addEvaTimeout(() => div.classList.add('visible'), 50);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+
+      if(msg.isEva){
+        stepCounter++;
+        setEvaStep(stepCounter, 'active');
+        if(stepCounter > 1) setEvaStep(stepCounter - 1, 'done');
+      }
+
+      if(index === 2) updateEvaCRMStatus('Eva iniciou atendimento com Larissa M.', '#A78BFA');
+      if(index === 5) updateEvaCRMStatus('Eva qualificou interesse: Preenchimento de olheira 🎯', '#FCD34D');
+      if(index === 8){
+        addEvaTimeout(() => moveEvaLead('eva-col-conversa', 'tag-warm', '💬 Em Conversa'), 400);
+        updateEvaCRMStatus('Eva moveu Larissa: Novo Lead → Em Conversa', '#A78BFA');
+      }
+      if(index === 11){
+        addEvaTimeout(() => {
+          moveEvaLead('eva-col-agendado', 'tag-booked', '📅 Agendado');
+          updateEvaCRMStatus('Eva moveu Larissa: Em Conversa → Agendado ✅', '#34D399');
+          addEvaTimeout(() => {
+            const agenda = document.getElementById('eva-agenda-notif');
+            if(agenda) agenda.classList.add('visible');
+            for(let i = 1; i <= 7; i++) setEvaStep(i, 'done');
+          }, 800);
+        }, 600);
+      }
+
+      processMessage(index + 1);
+    }, msg.delay);
+  }
+
+  processMessage(0);
+}
+
+const evaDemoSection = document.getElementById('eva-demo');
+if(evaDemoSection){
+  const evaObserver = new IntersectionObserver((entries) => {
+    if(entries[0].isIntersecting && !evaDemoStarted){
+      evaDemoStarted = true;
+      startEvaDemo();
+    }
+  }, { threshold: .3 });
+  evaObserver.observe(evaDemoSection);
+}
 </script>
 
 </body>

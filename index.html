@@ -28,8 +28,8 @@
   <meta name="twitter:description" content="Agenda, CRM, WhatsApp, prontuário, financeiro, estoque e 8 automações em um só sistema.">
   <meta name="twitter:image" content="https://clinike.com.br/images/dashboard-mockup.png">
   <!-- SEO -->
-  <meta name="description" content="Sistema completo para clínicas de estética. Agenda, CRM Kanban, WhatsApp integrado, prontuário, financeiro, estoque e 9 automações: aniversário, lembrete D-1, NPS pós-atendimento, cuidados pós-procedimento, recall de inativas, lista de espera, relatório semanal e mais.">
-  <meta name="keywords" content="sistema para clínica de estética, software clínica estética, agenda clínica, crm clínica estética, whatsapp clínica, automação clínica estética, nps clínica, recall pacientes">
+  <meta name="description" content="Sistema completo para clínicas de estética. Agenda, CRM Kanban, WhatsApp integrado, prontuário, financeiro, emissão de nota fiscal, estoque e 9 automações: aniversário, lembrete D-1, NPS pós-atendimento, cuidados pós-procedimento, recall de inativas, lista de espera, relatório semanal e mais.">
+  <meta name="keywords" content="sistema para clínica de estética, software clínica estética, agenda clínica, crm clínica estética, whatsapp clínica, automação clínica estética, nps clínica, recall pacientes, nota fiscal clínica estética, emissão nfs-e clínica">
 
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -821,6 +821,54 @@ footer{padding:54px 4% 36px;background:#060210}
   .appstore-badges{justify-content:center}
   .appstore-visual{margin-top:20px}
 }
+
+/* ===== Nota Fiscal (módulo adicional) ===== */
+.nf-section{padding:90px 4%;background:linear-gradient(160deg,#F0FDF4,#ECFDF5 45%,#F5F3FF)}
+.nf-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.nf-chip{background:linear-gradient(135deg,rgba(16,185,129,.12),rgba(124,58,237,.08));border-color:rgba(16,185,129,.3);color:#047857}
+.nf-title span{background:linear-gradient(135deg,#059669,#7C3AED);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.nf-steps{list-style:none;display:flex;flex-direction:column;gap:14px;margin:26px 0 28px}
+.nf-steps li{display:flex;gap:14px;align-items:flex-start;font-size:15px;color:var(--text);line-height:1.55}
+.nf-steps li b{display:block;font-family:'Sora',sans-serif;font-size:15px;color:var(--dark)}
+.nf-num{flex-shrink:0;width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,#10B981,#059669);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px;box-shadow:0 6px 16px rgba(16,185,129,.3)}
+.nf-price-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.nf-price{font-family:'Sora',sans-serif;color:var(--dark);line-height:1}
+.nf-price small{display:block;font-family:'DM Sans',sans-serif;font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.nf-price strong{font-size:34px;font-weight:800}
+.nf-price em{font-style:normal;font-size:14px;color:var(--muted);margin-left:2px}
+.nf-cta{display:inline-flex;align-items:center;gap:8px;padding:15px 26px;border-radius:14px;background:linear-gradient(135deg,#10B981,#059669);color:#fff;font-weight:800;font-size:15px;text-decoration:none;box-shadow:0 10px 28px rgba(16,185,129,.35);transition:transform .2s,box-shadow .2s}
+.nf-cta:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(16,185,129,.45)}
+.nf-note{font-size:12.5px;color:var(--muted);margin-top:14px;line-height:1.6}
+.nf-mock{background:#fff;border:1px solid rgba(16,185,129,.2);border-radius:24px;padding:26px;box-shadow:0 30px 70px rgba(6,95,70,.12);position:relative}
+.nf-mock-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.nf-mock-head span{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.nf-mock-head i{font-style:normal;font-size:11px;font-weight:700;color:#047857;background:#D1FAE5;padding:4px 10px;border-radius:50px}
+.nf-row{display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px dashed #E5E7EB;font-size:14px;gap:12px}
+.nf-row:last-of-type{border-bottom:none}
+.nf-row div b{display:block;color:var(--dark);font-size:14px}
+.nf-row div small{color:var(--muted);font-size:12px}
+.nf-row strong{font-family:'Sora',sans-serif;color:var(--dark);white-space:nowrap}
+.nf-btn-fake{margin-top:16px;width:100%;padding:13px;border-radius:12px;background:linear-gradient(135deg,#7C3AED,#5B21B6);color:#fff;font-weight:800;font-size:14px;text-align:center}
+.nf-ok{margin-top:14px;display:flex;align-items:center;gap:12px;background:#ECFDF5;border:1px solid #A7F3D0;border-radius:14px;padding:12px 14px;animation:fadeUp .8s ease both}
+.nf-ok-ico{width:36px;height:36px;border-radius:50%;background:#10B981;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0}
+.nf-ok b{display:block;color:#065F46;font-size:14px}
+.nf-ok small{color:#047857;font-size:12px}
+.nf-addon{max-width:1120px;margin:26px auto 0;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:linear-gradient(135deg,rgba(16,185,129,.12),rgba(124,58,237,.12));border:1px solid rgba(16,185,129,.35);border-radius:20px;padding:22px 26px}
+.nf-addon-txt{display:flex;align-items:center;gap:16px;min-width:0}
+.nf-addon-ico{width:48px;height:48px;border-radius:14px;background:rgba(16,185,129,.2);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.nf-addon-txt b{display:block;color:#fff;font-family:'Sora',sans-serif;font-size:16px}
+.nf-addon-txt span{color:rgba(255,255,255,.6);font-size:13.5px;line-height:1.5}
+.nf-addon-right{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.nf-addon-price{color:#fff;font-family:'Sora',sans-serif;font-weight:800;font-size:22px;white-space:nowrap}
+.nf-addon-price em{font-style:normal;font-size:13px;color:rgba(255,255,255,.55);font-weight:600}
+.nf-addon .nf-cta{padding:12px 20px;font-size:14px}
+@media(max-width:900px){
+  .nf-section{padding:60px 4%}
+  .nf-inner{grid-template-columns:1fr;gap:36px}
+  .nf-price strong{font-size:28px}
+  .nf-addon{padding:18px}
+  .nf-addon-right{width:100%;justify-content:space-between}
+}
 </style>
 </head>
 <body>
@@ -1316,6 +1364,36 @@ footer{padding:54px 4% 36px;background:#060210}
         </ul>
       </div>
 
+    </div>
+  </div>
+</section>
+
+
+<!-- Nota Fiscal — módulo adicional -->
+<section class="nf-section" id="nota-fiscal">
+  <div class="nf-inner">
+    <div>
+      <div class="section-chip nf-chip">🧾 Novo módulo</div>
+      <h2 class="section-title nf-title">Nota fiscal do atendimento em <span>3 cliques</span></h2>
+      <p class="section-sub">Chega de abrir o site da prefeitura e digitar tudo de novo. A nota sai direto do financeiro do Clinike, com os dados da paciente e do procedimento já preenchidos.</p>
+      <ul class="nf-steps">
+        <li><span class="nf-num">1</span><div><b>Registre o pagamento</b>Como você já faz hoje, na entrada do financeiro.</div></li>
+        <li><span class="nf-num">2</span><div><b>Clique em “Emitir nota”</b>Paciente, CPF, serviço e valor vêm preenchidos — é só conferir.</div></li>
+        <li><span class="nf-num">3</span><div><b>Nota autorizada</b>PDF e XML ficam salvos na entrada, prontos pra enviar à paciente e à contabilidade.</div></li>
+      </ul>
+      <div class="nf-price-row">
+        <div class="nf-price"><small>Adicional em qualquer plano</small><strong>R$ 89,90</strong><em>/mês</em></div>
+        <a href="https://wa.me/5534991805722?text=Ol%C3%A1%21+Quero+ativar+o+m%C3%B3dulo+de+Nota+Fiscal+no+Clinike+%F0%9F%A7%BE" target="_blank" rel="noopener" class="nf-cta">Quero ativar a Nota Fiscal →</a>
+      </div>
+      <p class="nf-note">NFS-e para procedimentos e NF-e para venda de produtos. Precisa de certificado digital A1 da clínica. Disponibilidade conforme o município — nossa equipe confirma e configura com você.</p>
+    </div>
+    <div class="nf-mock" aria-hidden="true">
+      <div class="nf-mock-head"><span>Entrada · Hoje</span><i>Pago</i></div>
+      <div class="nf-row"><div><b>Juliana Andrade</b><small>CPF ***.482.***-10</small></div><strong>R$ 1.800,00</strong></div>
+      <div class="nf-row"><div><b>Toxina botulínica — 3 regiões</b><small>Pix · Dra. Responsável</small></div><strong>R$ 1.200,00</strong></div>
+      <div class="nf-row"><div><b>Bioestimulador de colágeno</b><small>Pix · Dra. Responsável</small></div><strong>R$ 600,00</strong></div>
+      <div class="nf-btn-fake">🧾 Emitir nota fiscal</div>
+      <div class="nf-ok"><div class="nf-ok-ico">✓</div><div><b>NFS-e autorizada</b><small>PDF e XML salvos na entrada</small></div></div>
     </div>
   </div>
 </section>
@@ -1875,6 +1953,17 @@ footer{padding:54px 4% 36px;background:#060210}
         <a href="https://wa.me/5534991805722?text=Ol%C3%A1%21+Quero+o+Combo+Completo+do+Clinike+com+a+Eva" target="_blank" rel="noopener" class="plan-cta-new combo-cta">Quero o Combo Completo</a>
       </div>
     </div>
+
+    <div class="nf-addon">
+      <div class="nf-addon-txt">
+        <div class="nf-addon-ico">🧾</div>
+        <div><b>Adicional: Nota Fiscal</b><span>Emita NFS-e e NF-e direto do financeiro, em qualquer plano.</span></div>
+      </div>
+      <div class="nf-addon-right">
+        <div class="nf-addon-price">+ R$ 89,90 <em>/mês</em></div>
+        <a href="https://wa.me/5534991805722?text=Ol%C3%A1%21+Quero+ativar+o+m%C3%B3dulo+de+Nota+Fiscal+no+Clinike+%F0%9F%A7%BE" target="_blank" rel="noopener" class="nf-cta">Quero ativar</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1973,6 +2062,14 @@ footer{padding:54px 4% 36px;background:#060210}
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">Como funciona a assinatura digital de documentos?<span class="faq-ico">+</span></div>
         <div class="faq-a">Você envia o termo de consentimento direto pra um link único. A paciente assina pelo celular antes mesmo de chegar na clínica — sem papel, sem impressora, com validade jurídica.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">O Clinike emite nota fiscal?<span class="faq-ico">+</span></div>
+        <div class="faq-a">Sim, com o módulo adicional de Nota Fiscal (<b>R$ 89,90/mês</b>, em qualquer plano). A nota sai direto da entrada do financeiro em poucos cliques: NFS-e para procedimentos e NF-e para venda de produtos. PDF e XML ficam salvos no sistema, prontos pra enviar à paciente e à contabilidade.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">O que preciso pra emitir nota pelo Clinike?<span class="faq-ico">+</span></div>
+        <div class="faq-a">CNPJ da clínica, inscrição municipal e certificado digital A1. A emissão depende da prefeitura da sua cidade estar integrada — antes de ativar, nossa equipe confirma o seu município e faz a configuração junto com você (ou com sua contabilidade).</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">Meus dados são seguros?<span class="faq-ico">+</span></div>

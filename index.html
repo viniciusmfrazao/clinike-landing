@@ -120,7 +120,7 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 14px 6px 6px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1px var(--line);font-size:13.5px;color:var(--ink-2);font-weight:500}
 .eyebrow b{background:var(--brand-soft);color:var(--brand);font-weight:600;padding:3px 10px;border-radius:999px;font-size:12.5px}
 .hero h1{font-size:clamp(40px,7.4vw,84px);margin:14px auto 0;max-width:13ch}
-.hero h1 .flow{background:linear-gradient(100deg,#4c1d95 0%,#7c3aed 18%,#db2777 36%,#f59e0b 50%,#db2777 64%,#7c3aed 82%,#4c1d95 100%);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:flow 9s linear infinite;padding-bottom:.08em}
+.hero h1 .flow{background:linear-gradient(100deg,#5b21b6 0%,#7c3aed 16%,#db2777 33%,#a855f7 50%,#2563eb 67%,#7c3aed 84%,#5b21b6 100%);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:flow 9s linear infinite;padding-bottom:.08em}
 @keyframes flow{from{background-position:0% 50%}to{background-position:300% 50%}}
 .slogan{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:22px;font-family:'Sora',sans-serif;font-weight:600;font-size:clamp(14px,1.5vw,16px);letter-spacing:.14em;text-transform:uppercase;color:#5b21b6}
 .slogan::before,.slogan::after{content:"";width:28px;height:2px;border-radius:2px;background:linear-gradient(90deg,transparent,#a855f7)}
@@ -397,7 +397,7 @@ section{position:relative}
 .review:hover{transform:translateY(-4px);box-shadow:0 30px 60px -30px rgba(139,92,246,.6)}
 .review.hot{background:linear-gradient(160deg,#2a1748,#170f26 60%) padding-box,linear-gradient(150deg,#a78bfa,#f472b6 60%,rgba(255,255,255,.1)) border-box;box-shadow:0 30px 70px -30px rgba(236,72,153,.5)}
 .rv-head{display:flex;align-items:center;gap:12px}
-.rv-av{width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:'Sora',sans-serif;font-weight:700;font-size:15px;color:#fff;background:var(--g,linear-gradient(135deg,#8b5cf6,#ec4899));box-shadow:0 0 0 2px #15101f,0 0 0 4px rgba(167,139,250,.55)}
+.rv-av{width:46px;height:46px;border-radius:50%;flex:none;object-fit:cover;display:grid;place-items:center;font-family:'Sora',sans-serif;font-weight:700;font-size:15px;color:#fff;background:var(--g,linear-gradient(135deg,#8b5cf6,#ec4899));box-shadow:0 0 0 2px #15101f,0 0 0 4px rgba(167,139,250,.55)}
 .rv-head b{display:block;font-size:15.5px;line-height:1.25;color:#fff}
 .rv-head small{color:#b9a6ff;font-size:13px}
 .rv-head .src{margin-left:auto;color:var(--night-muted);display:inline-flex}
@@ -912,7 +912,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
 
       <!-- Mariana Farah -->
       <article class="review rv rv-d1">
-        <div class="rv-head"><span class="rv-av" style="--g:linear-gradient(135deg,#a78bfa,#6366f1)" aria-hidden="true">MF</span><span><b>Clínica Dra. Mariana Farah</b><small>São José dos Campos · SP</small></span><span class="src" title="WhatsApp"><svg class="ico ico-fill" aria-hidden="true"><use href="#i-wa"/></svg></span></div>
+        <div class="rv-head"><img class="rv-av" src="images/depoimentos/mariana-farah.webp" width="46" height="46" alt="Foto de Dra. Mariana Farah" loading="lazy" decoding="async"><span><b>Clínica Dra. Mariana Farah</b><small>São José dos Campos · SP</small></span><span class="src" title="WhatsApp"><svg class="ico ico-fill" aria-hidden="true"><use href="#i-wa"/></svg></span></div>
         <div class="bubbles">
           <div class="bub out">Está gostando do Clinike? Precisa de alguma ajuda?<time>16:01</time></div>
           <div class="bub in big">Eu estou adorandooo, sério! Já indiquei o Clinike até para a menina que faz o marketing da clínica<time>16:11</time></div>
@@ -921,20 +921,20 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
 
       <!-- Nathália -->
       <article class="review rv rv-d2">
-        <div class="rv-head"><span class="rv-av" style="--g:linear-gradient(135deg,#fb7185,#f59e0b)" aria-hidden="true">NB</span><span><b>Nathália Benedetti</b><small>Clínica em São Paulo · SP</small></span><span class="src" title="Áudio no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#i-mic"/></svg></span></div>
+        <div class="rv-head"><img class="rv-av" src="images/depoimentos/nathalia-benedetti.webp" width="46" height="46" alt="Foto de Nathália Benedetti" loading="lazy" decoding="async"><span><b>Nathália Benedetti</b><small>Clínica em São Paulo · SP</small></span><span class="src" title="Áudio no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#i-mic"/></svg></span></div>
         <div class="audio" aria-hidden="true"><span class="play"><svg viewBox="0 0 24 24" class="ico-fill"><path d="M7 4v16l13-8z" fill="currentColor"/></svg></span><span class="wf"><i style="height:30%"></i><i style="height:55%"></i><i style="height:40%"></i><i style="height:80%"></i><i style="height:60%"></i><i style="height:95%"></i><i style="height:45%"></i><i style="height:70%"></i><i style="height:35%"></i><i style="height:85%"></i><i style="height:50%"></i><i style="height:65%"></i><i style="height:30%"></i><i style="height:75%"></i><i style="height:55%"></i><i style="height:90%"></i><i style="height:40%"></i><i style="height:60%"></i><i style="height:35%"></i><i style="height:70%"></i><i style="height:50%"></i><i style="height:80%"></i><i style="height:45%"></i><i style="height:30%"></i><i style="height:60%"></i><i style="height:40%"></i><i style="height:75%"></i><i style="height:35%"></i></span><small>0:13</small></div>
         <p class="rv-quote">O sistema é muito completo, muito bom. Só preciso colocar as fotos agora — vou pôr pelo celular, porque tá tudo no celular. <mark>Tô gostando demais, de verdade.</mark> Parabéns, vocês criaram um sistema completo!</p>
       </article>
 
       <!-- Sarah Pina -->
       <article class="review rv">
-        <div class="rv-head"><span class="rv-av" style="--g:linear-gradient(135deg,#8b5cf6,#ec4899)" aria-hidden="true">SP</span><span><b>Dra. Sarah Pina</b><small>Clínica Sarah Pina · Uberlândia, MG</small></span><span class="src rv-stars" role="img" aria-label="5 de 5 estrelas"><svg class="ico ico-fill"><use href="#i-star"/></svg><svg class="ico ico-fill"><use href="#i-star"/></svg><svg class="ico ico-fill"><use href="#i-star"/></svg><svg class="ico ico-fill"><use href="#i-star"/></svg><svg class="ico ico-fill"><use href="#i-star"/></svg></span></div>
+        <div class="rv-head"><img class="rv-av" src="images/depoimentos/sarah-pina.webp" width="46" height="46" alt="Foto de Dra. Sarah Pina" loading="lazy" decoding="async"><span><b>Dra. Sarah Pina</b><small>Clínica Sarah Pina · Uberlândia, MG</small></span><span class="src rv-stars" role="img" aria-label="5 de 5 estrelas"><svg class="ico ico-fill"><use href="#i-star"/></svg><svg class="ico ico-fill"><use href="#i-star"/></svg><svg class="ico ico-fill"><use href="#i-star"/></svg><svg class="ico ico-fill"><use href="#i-star"/></svg><svg class="ico ico-fill"><use href="#i-star"/></svg></span></div>
         <p class="rv-quote" style="font-size:clamp(16px,1.6vw,19px)">A confirmação automática 24h antes praticamente <mark>acabou com as faltas.</mark> E o NPS me mostra exatamente o que cada paciente achou — virou minha bússola pra melhorar a clínica.</p>
       </article>
 
       <!-- Joao -->
       <article class="review rv rv-d1">
-        <div class="rv-head"><span class="rv-av" style="--g:linear-gradient(135deg,#22d3ee,#6366f1)" aria-hidden="true">JM</span><span><b>João Mariana</b><small>Clínica Odontológica · MG</small></span><span class="src" title="WhatsApp"><svg class="ico ico-fill" aria-hidden="true"><use href="#i-wa"/></svg></span></div>
+        <div class="rv-head"><img class="rv-av" src="images/depoimentos/joao.webp" width="46" height="46" alt="Foto de João" loading="lazy" decoding="async"><span><b>João</b><small>Clínica Dra. Mariana Mattos · MG</small></span><span class="src" title="WhatsApp"><svg class="ico ico-fill" aria-hidden="true"><use href="#i-wa"/></svg></span></div>
         <div class="bubbles">
           <div class="bub in">Boa tarde, meu querido<time>15:55</time></div>
           <div class="bub in big"><span class="bub reply"><b>Você</b>Muito obrigado por ter indicado!</span>Imagina, sistema top desse merece né kkkk<time>15:55</time></div>
@@ -943,7 +943,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
 
       <!-- Aline -->
       <article class="review rv">
-        <div class="rv-head"><span class="rv-av" style="--g:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285aeb 90%)" aria-hidden="true">AD</span><span><b>@aline_decressenzobeauty</b><small>Clínica de Estética · SP</small></span><span class="src" title="Instagram"><svg class="ico" aria-hidden="true"><use href="#i-instagram"/></svg></span></div>
+        <div class="rv-head"><img class="rv-av" src="images/depoimentos/aline-adbeauty.webp" width="46" height="46" alt="Foto de Aline, da AD Beauty Clinique" loading="lazy" decoding="async"><span><b>@aline_decressenzobeauty</b><small>Clínica de Estética · SP</small></span><span class="src" title="Instagram"><svg class="ico" aria-hidden="true"><use href="#i-instagram"/></svg></span></div>
         <p class="rv-quote" style="font-size:clamp(16px,1.6vw,19px)">O melhor sistema para clínicas, tem <mark>elevado o nível da gestão</mark> da <span class="mention">@adbeauty_clinique</span></p>
       </article>
     </div>

@@ -201,18 +201,26 @@ section{position:relative}
 .story-sticky{background:var(--tint,#f5f1ff);transition:background-color .8s var(--ease)}
 .story-sticky::before{content:"";position:absolute;width:70vmax;height:70vmax;right:-20vmax;top:50%;transform:translateY(-50%);border-radius:50%;background:radial-gradient(closest-side,var(--glow,rgba(139,92,246,.25)),transparent);transition:background .8s;pointer-events:none}
 .step .kicker{color:var(--accent,var(--brand))}
-.story-dots i.on{background:var(--accent,var(--brand))!important}
+.story-tabs button[aria-selected="true"]{background:var(--accent,var(--brand))!important}
 .story-sticky{position:sticky;top:0;height:100vh;height:100svh;display:flex;align-items:center;overflow:hidden}
 .story-grid{display:grid;grid-template-columns:1fr;gap:24px;align-items:center;width:100%}
-.story-copy{position:relative;min-height:190px;order:2;text-align:center}
+.story-copy{position:relative;min-height:190px;order:3;text-align:center}
 .step{position:absolute;inset:0;opacity:0;transform:translateY(20px);transition:opacity .5s var(--ease),transform .5s var(--ease);pointer-events:none}
 .step.on{opacity:1;transform:none;pointer-events:auto}
 .step .kicker{display:inline-flex;align-items:center;gap:8px}
 .step h3{font-size:clamp(26px,3.6vw,46px);margin-top:10px}
 .step p{color:var(--muted);font-size:clamp(15.5px,1.6vw,18px);margin-top:12px;max-width:460px;margin-inline:auto}
-.story-dots{display:flex;gap:8px;justify-content:center;order:3}
-.story-dots i{width:8px;height:8px;border-radius:99px;background:#d9d3e6;transition:width .4s var(--ease),background .4s}
-.story-dots i.on{width:28px;background:var(--brand)}
+.story-tabs{order:2;display:flex;gap:4px;justify-self:center;padding:4px;border-radius:999px;background:rgba(255,255,255,.75);box-shadow:inset 0 0 0 1px var(--line),0 8px 24px -14px rgba(22,18,31,.25);backdrop-filter:blur(8px);max-width:100%}
+.story-tabs button{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 12px;border-radius:999px;font-size:13px;font-weight:600;color:var(--muted);transition:background .3s,color .3s;white-space:nowrap}
+.story-tabs button:hover{color:var(--ink)}
+.story-tabs button[aria-selected="true"]{background:var(--brand);color:#fff}
+.story-tabs .ico{width:16px;height:16px}
+.story-hint{order:4;text-align:center;font-size:12.5px;color:var(--faint)}
+.hint-mouse{display:none}
+@media(hover:hover) and (pointer:fine){.hint-touch{display:none}.hint-mouse{display:inline}}
+@media(max-width:420px){.story-tabs button{padding:0 9px;font-size:12px;gap:4px}.story-tabs .ico{display:none}}
+.phone-stage{touch-action:pan-y;cursor:grab}
+.phone-inner{position:absolute;inset:0;transform-style:preserve-3d}
 .phone-stage{order:1;perspective:1400px;display:grid;place-items:center;height:min(50svh,520px);margin-top:48px}
 .phone{--ry:0deg;--rx:0deg;position:relative;width:auto;height:100%;aspect-ratio:9/19;transform-style:preserve-3d;transform:rotateX(var(--rx)) rotateY(var(--ry));will-change:transform}
 .phone-face{position:absolute;inset:0;border-radius:15% / 7.2%;backface-visibility:hidden;-webkit-backface-visibility:hidden}
@@ -225,10 +233,11 @@ section{position:relative}
 .phone-side{position:absolute;top:50%;left:50%;width:8px;height:96%;margin:-48% 0 0 -4px;background:#2a2436;transform:rotateY(90deg) translateZ(0);}
 .phone-screen{container-type:size;position:relative;width:100%;height:100%;border-radius:12.5% / 6%;overflow:hidden;background:#fff}
 .notch{position:absolute;top:1.6%;left:50%;transform:translateX(-50%);width:30%;height:3.4%;background:#0f0c16;border-radius:99px;z-index:5}
-.scr{position:absolute;inset:0;padding:15% 7% 7%;opacity:0;transition:opacity .35s;font-size:clamp(8px,4.6cqw,15px);display:flex;flex-direction:column;gap:.85em}
-.scr.on{opacity:1}
+.scr{position:absolute;inset:0;padding:15% 7% 7%;opacity:0;transform:translateX(105%);transition:opacity .45s var(--ease),transform .55s var(--ease);font-size:clamp(8px,4.6cqw,15px);display:flex;flex-direction:column;gap:.85em}
+.scr.on{opacity:1;transform:none}
+.scr.prev{transform:translateX(-105%)}
 .tabbar{position:absolute;left:0;right:0;bottom:0;height:11%;display:flex;justify-content:space-around;align-items:flex-start;padding-top:3.2%;border-top:1px solid var(--line);background:rgba(255,255,255,.94);z-index:4;color:var(--faint)}
-.tabbar svg{width:7.5cqw;height:7.5cqw}
+.tabbar svg{width:7.5cqw;height:7.5cqw;transition:color .3s}
 .tabbar .on{color:var(--brand)}
 .scr{bottom:11%!important}
 
@@ -266,9 +275,10 @@ section{position:relative}
   .story-grid{grid-template-columns:1fr 1fr;gap:48px}
   .story-copy{order:1;text-align:left;min-height:260px}
   .step p{margin-inline:0}
-  .story-dots{grid-column:1;grid-row:2;justify-content:flex-start;margin-top:-8px}
-  .story-copy{grid-row:1}
-  .phone-stage{grid-row:1 / span 2}
+  .story-tabs{grid-column:1;grid-row:1;justify-self:start;align-self:end}
+  .story-copy{grid-column:1;grid-row:2}
+  .story-hint{grid-column:1;grid-row:3;text-align:left;align-self:start}
+  .phone-stage{grid-column:2;grid-row:1 / span 3}
   .phone-stage{order:2;height:min(78vh,700px);margin-top:0}
 }
 
@@ -400,7 +410,10 @@ section{position:relative}
 .rv-stars{display:flex;gap:3px;color:#fbbf24}
 .rv-stars .ico{width:16px;height:16px}
 .mention{color:#c4b5fd;font-weight:600}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:760px;margin:72px auto 0;text-align:center}
+.stats-head{text-align:center;margin-top:80px}
+.stats-head .kicker{color:#c4b5fd}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 12px;max-width:1000px;margin:24px auto 0;text-align:center}
+@media(min-width:860px){.stats{grid-template-columns:repeat(4,1fr)}}
 .stat strong{display:block;font-family:'Sora',sans-serif;font-size:clamp(28px,4.4vw,48px);font-weight:600;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
 .stat span{font-size:13.5px}
 .stats-note{text-align:center;font-size:13px;margin-top:16px}
@@ -701,8 +714,9 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
         </div>
       </div>
 
-      <div class="phone-stage" aria-hidden="true">
+      <div class="phone-stage" id="phoneStage" aria-hidden="true">
         <div class="phone" id="phone">
+         <div class="phone-inner" id="phoneInner">
           <div class="phone-face phone-front">
             <div class="phone-screen">
               <div class="notch"></div>
@@ -754,10 +768,17 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
             </div>
           </div>
           <div class="phone-face phone-back"><span class="cam"></span><svg viewBox="0 0 38 38"><use href="#logo"/></svg></div>
+         </div>
         </div>
       </div>
 
-      <div class="story-dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+      <div class="story-tabs" role="tablist" aria-label="Escolha um recurso">
+        <button role="tab" aria-selected="true" data-go="0"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg>Agenda</button>
+        <button role="tab" aria-selected="false" data-go="1" tabindex="-1"><svg class="ico" aria-hidden="true"><use href="#i-sparkles"/></svg>Prontuário</button>
+        <button role="tab" aria-selected="false" data-go="2" tabindex="-1"><svg class="ico" aria-hidden="true"><use href="#i-wallet"/></svg>Financeiro</button>
+        <button role="tab" aria-selected="false" data-go="3" tabindex="-1"><svg class="ico" aria-hidden="true"><use href="#i-repeat"/></svg>Automações</button>
+      </div>
+      <p class="story-hint"><span class="hint-touch">Deslize o celular ou toque nas abas</span><span class="hint-mouse">Role a página ou clique nas abas</span></p>
     </div>
   </div>
 </section>
@@ -912,12 +933,14 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
       </article>
     </div>
 
+    <div class="stats-head rv"><span class="kicker">O Clinike em números</span></div>
     <div class="stats">
-      <div class="stat rv"><strong data-count="2800" data-prefix="+">+2.800</strong><span>pacientes cadastradas</span></div>
-      <div class="stat rv rv-d1"><strong data-count="75" data-prefix="+">+75</strong><span>procedimentos por semana</span></div>
-      <div class="stat rv rv-d2"><strong data-count="40" data-prefix="+">+40</strong><span>pacientes atendidas por semana</span></div>
+      <div class="stat rv"><strong data-count="14697">14.697</strong><span>pacientes cadastrados no Clinike</span></div>
+      <div class="stat rv rv-d1"><strong data-count="2355">2.355</strong><span>leads recebidos no mês</span></div>
+      <div class="stat rv rv-d2"><strong data-count="1785">1.785</strong><span>agendamentos no mês</span></div>
+      <div class="stat rv rv-d3"><strong data-count="93312">93.312</strong><span>mensagens da Eva no mês</span></div>
     </div>
-    <p class="stats-note">Números da Clínica Sarah Pina, que opera 100% no Clinike.</p>
+    <p class="stats-note">Dados reais da plataforma, somando todas as clínicas que usam o Clinike.</p>
 
     <div class="ig rv">
       <div class="ig-l"><span class="ig-ico"><svg class="ico" aria-hidden="true"><use href="#i-instagram"/></svg></span><span><b>@useclinike</b><small>Bastidores, novidades e clínicas reais usando o Clinike.</small></span></div>
@@ -1150,17 +1173,43 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
   const phone = document.getElementById('phone');
   const steps = story.querySelectorAll('.step');
   const scrs = story.querySelectorAll('.scr');
-  const dots = story.querySelectorAll('.story-dots i');
+  const stabs = story.querySelectorAll('.story-tabs button');
+  const phoneInner = document.getElementById('phoneInner');
   const N = steps.length;
   let curStep = 0, curScr = 0;
   const TINTS=[['#f4efff','rgba(139,92,246,.30)','#6d28d9'],['#fdeff7','rgba(236,72,153,.26)','#be185d'],['#ecfaf3','rgba(16,185,129,.24)','#047857'],['#fff5e8','rgba(245,158,11,.26)','#b45309']];
   const sticky=story.querySelector('.story-sticky');
   function tint(i){ sticky.style.setProperty('--tint',TINTS[i][0]); sticky.style.setProperty('--glow',TINTS[i][1]); sticky.style.setProperty('--accent',TINTS[i][2]); }
   tint(0);
-  function setStep(i){ if(i===curStep) return; curStep=i; tint(i); steps.forEach((s,k)=>s.classList.toggle('on',k===i)); dots.forEach((d,k)=>d.classList.toggle('on',k===i)); }
+  function setStep(i){ if(i===curStep) return; curStep=i; tint(i); steps.forEach((s,k)=>s.classList.toggle('on',k===i)); stabs.forEach((b,k)=>{ b.setAttribute('aria-selected',k===i); b.tabIndex=k===i?0:-1; }); }
   const tabs = story.querySelectorAll('.tabbar svg');
   tabs[0].classList.add('on');
-  function setScr(i){ if(i===curScr) return; curScr=i; scrs.forEach((s,k)=>s.classList.toggle('on',k===i)); tabs.forEach((t,k)=>t.classList.toggle('on',k===i)); }
+  function setScr(i){ if(i===curScr) return; const dir=i>curScr?1:-1; curScr=i;
+    scrs.forEach((s,k)=>{ s.classList.toggle('on',k===i); s.classList.toggle('prev',k<i); });
+    tabs.forEach((t,k)=>t.classList.toggle('on',k===i));
+    if(!reduce && phoneInner.animate){ phoneInner.animate([{transform:'rotateY(0deg)'},{transform:`rotateY(${-16*dir}deg) scale(.97)`},{transform:'rotateY(0deg)'}],{duration:650,easing:'cubic-bezier(.2,.7,.2,1)'}); }
+  }
+  /* Navigation: tabs, keyboard, swipe on the phone */
+  function goTo(i){
+    i=Math.max(0,Math.min(N-1,i));
+    const total=story.offsetHeight-innerHeight;
+    const y=story.getBoundingClientRect().top+scrollY+total*((i+.5)/N);
+    scrollTo({top:y,behavior:reduce?'auto':'smooth'});
+  }
+  stabs.forEach((b,k)=>{
+    b.addEventListener('click',()=>goTo(k));
+    b.addEventListener('keydown',e=>{ if(e.key==='ArrowRight'||e.key==='ArrowLeft'){ e.preventDefault(); const n=(k+(e.key==='ArrowRight'?1:-1)+N)%N; stabs[n].focus(); goTo(n); } });
+  });
+  tabs.forEach((t,k)=>t.addEventListener('click',()=>goTo(k)));
+  const stage=document.getElementById('phoneStage');
+  let sx=null, sy=null;
+  stage.addEventListener('pointerdown',e=>{ sx=e.clientX; sy=e.clientY; },{passive:true});
+  stage.addEventListener('pointerup',e=>{
+    if(sx===null) return; const dx=e.clientX-sx, dy=e.clientY-sy; sx=null;
+    if(Math.abs(dx)>40 && Math.abs(dx)>Math.abs(dy)) goTo(curStep+(dx<0?1:-1));
+    else if(Math.abs(dx)<8 && Math.abs(dy)<8) goTo(curStep+1<N?curStep+1:0);
+  });
+  stage.addEventListener('pointercancel',()=>{ sx=null; });
 
   /* Eva */
   const eva = document.getElementById('eva');
@@ -1217,19 +1266,12 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
 
     /* Story phone */
     const sp=progress(story);
-    const seg=sp*N; const idx=Math.min(N-1,Math.floor(seg)); const local=seg-idx;
-    if(reduce){ setStep(idx); setScr(idx); }
-    else{
-      // Each step: short hold, then a full 360° spin into the next step during the last 60%.
-      const T=.6; let spin=0;
-      if(idx<N-1 && local>1-T){ spin=ease((local-(1-T))/T); }
-      const ry=idx*360+spin*360;
-      const tilt=Math.sin(sp*Math.PI*2)*6;
-      phone.style.setProperty('--ry',(ry-12+sp*24).toFixed(2)+'deg');
-      phone.style.setProperty('--rx',tilt.toFixed(2)+'deg');
-      // Swap screen while the back of the phone faces the viewer
-      const shown = spin>.5 ? idx+1 : idx;
-      setScr(shown); setStep(shown);
+    const seg=sp*N; const idx=Math.min(N-1,Math.floor(seg)); 
+    setStep(idx); setScr(idx);
+    if(!reduce){
+      // Gentle 3D drift tied to scroll; each screen change adds a quick turn (see setScr).
+      phone.style.setProperty('--ry',(-14+sp*28).toFixed(2)+'deg');
+      phone.style.setProperty('--rx',(Math.sin(sp*Math.PI)*5).toFixed(2)+'deg');
     }
 
     /* Eva chat */

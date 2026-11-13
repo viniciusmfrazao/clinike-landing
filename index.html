@@ -197,7 +197,7 @@ section{position:relative}
 .manifesto-sign{text-align:center;margin-top:28px;color:var(--muted);font-size:15px}
 
 /* ---------- Story: rotating phone ---------- */
-.story{height:480vh;background:var(--soft)}
+.story{height:300vh;background:var(--soft)}
 .story-sticky{background:var(--tint,#f5f1ff);transition:background-color .8s var(--ease)}
 .story-sticky::before{content:"";position:absolute;width:70vmax;height:70vmax;right:-20vmax;top:50%;transform:translateY(-50%);border-radius:50%;background:radial-gradient(closest-side,var(--glow,rgba(139,92,246,.25)),transparent);transition:background .8s;pointer-events:none}
 .step .kicker{color:var(--accent,var(--brand))}
@@ -273,7 +273,7 @@ section{position:relative}
 }
 
 /* ---------- Eva (dark) ---------- */
-.eva{background:var(--night);color:var(--night-text);height:340vh}
+.eva{background:var(--night);color:var(--night-text);height:240vh}
 .eva-sticky{position:sticky;top:0;min-height:100vh;min-height:100svh;display:flex;align-items:center;overflow:hidden;padding:72px 0 24px}
 .eva-sticky::before{content:"";position:absolute;width:900px;height:900px;left:60%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(139,92,246,.22),transparent);pointer-events:none}
 .eva-grid{position:relative;display:grid;grid-template-columns:1fr;gap:24px;align-items:center;width:100%}
@@ -517,6 +517,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
 .rv{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .rv.in{opacity:1;transform:none}
 .rv-d1{transition-delay:.08s}.rv-d2{transition-delay:.16s}.rv-d3{transition-delay:.24s}
+
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -1219,8 +1220,8 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
     const seg=sp*N; const idx=Math.min(N-1,Math.floor(seg)); const local=seg-idx;
     if(reduce){ setStep(idx); setScr(idx); }
     else{
-      // Each step: hold, then do a full 360° spin into the next step during the last 35%.
-      const T=.35; let spin=0;
+      // Each step: short hold, then a full 360° spin into the next step during the last 60%.
+      const T=.6; let spin=0;
       if(idx<N-1 && local>1-T){ spin=ease((local-(1-T))/T); }
       const ry=idx*360+spin*360;
       const tilt=Math.sin(sp*Math.PI*2)*6;

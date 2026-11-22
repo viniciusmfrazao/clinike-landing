@@ -12,6 +12,7 @@
 - Nota fiscal NFS-e e NF-e (adicional, R$ 89,90/mês)
 - 9 automações: confirmação D-1, lembrete 2h antes, NPS pós-atendimento, cuidados pós-procedimento, recall de inativas, lista de espera, aniversário, lead vira cliente e relatório semanal
 - Eva: IA que atende pacientes no WhatsApp 24h, entende áudio e imagem, agenda horários e passa para um humano quando necessário
+- Treinamento ao vivo com a equipe Clinike e suporte humano pelo WhatsApp
 - Funciona no computador, tablet e celular; app para iOS na App Store
 
 ## Planos (valores mensais, em reais)

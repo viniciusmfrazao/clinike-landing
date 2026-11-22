@@ -261,6 +261,14 @@
 }
 </script>
 
+<!-- Vercel Web Analytics + Speed Insights (sem cookies) -->
+<script>
+window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};
+window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments)};
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
@@ -1384,6 +1392,38 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
 
 <a class="wa-float" id="waFloat" href="https://wa.me/5534991805722?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+o+Clinike+e+conhecer+os+planos+dispon%C3%ADveis+%F0%9F%98%8A" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg class="ico-fill" aria-hidden="true"><use href="#i-wa"/></svg></a>
 
+<script>
+/* Medição de cliques (Vercel Web Analytics). Máx. 2 propriedades por evento. */
+(function(){
+  const LOCAL={top:'Hero',eva:'Eva','eva-feats':'Eva',automacoes:'Automações',depoimentos:'Depoimentos',planos:'Planos',faq:'Dúvidas',final:'Chamada final'};
+  const onde=el=>{
+    if(el.id==='waFloat') return 'Botão flutuante';
+    if(el.closest('#nav')) return 'Menu';
+    if(el.closest('footer')) return 'Rodapé';
+    const sec=el.closest('section');
+    if(!sec) return 'Outro';
+    return LOCAL[sec.id]||LOCAL[sec.className.split(' ').pop()]||sec.id||sec.className.split(' ')[0];
+  };
+  const qual=el=>{
+    const plan=el.closest('.plan'); if(plan){const h=plan.querySelector('h3'); if(h) return h.textContent.trim();}
+    if(el.closest('.addon')) return 'Nota Fiscal';
+    return (el.textContent||el.getAttribute('aria-label')||'').replace(/\s+/g,' ').trim().slice(0,60)||'(sem texto)';
+  };
+  const ev=(name,data)=>{try{window.va('event',{name,data})}catch(e){}};
+  document.addEventListener('click',e=>{
+    const a=e.target.closest('a[href]'); if(!a) return;
+    const h=a.getAttribute('href');
+    if(h.includes('wa.me/')) ev('WhatsApp',{local:onde(a),botao:qual(a)});
+    else if(h.includes('app.clinike.com.br')) ev('Entrar no sistema',{local:onde(a)});
+    else if(h.includes('apps.apple.com')) ev('App Store',{local:onde(a)});
+    else if(h.includes('instagram.com')) ev('Instagram',{local:onde(a)});
+    else if(h==='#planos') ev('Ver planos',{local:onde(a)});
+  },{capture:true});
+  document.querySelectorAll('#faq details').forEach(d=>d.addEventListener('toggle',()=>{
+    if(d.open) ev('Dúvida aberta',{pergunta:d.querySelector('summary').textContent.trim().slice(0,80)});
+  }));
+})();
+</script>
 <script>
 (function(){
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

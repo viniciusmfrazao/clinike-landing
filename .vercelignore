@@ -1,0 +1,3 @@
+# Não publicar backups nem arquivos internos
+*.bak*
+leiame.txt

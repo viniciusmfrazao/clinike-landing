@@ -20,7 +20,8 @@
 - Clinike Profissional: R$ 249,90 (preço de entrada) — IA no prontuário, 9 automações, CRM e WhatsApp
 - Eva — IA WhatsApp: R$ 699 — add-on que também conecta ao sistema atual da clínica
 - Combo Completo: R$ 899 — Profissional + Eva
-- Teste grátis de 7 dias; sem fidelidade, sem taxa de implantação e migração de dados gratuita
+- Teste grátis de 7 dias: a equipe faz uma apresentação ao vivo e depois libera o acesso
+- Sem fidelidade e sem multa: cancela quando quiser; sem taxa de implantação; migração de dados gratuita
 
 ## Links
 - [Página principal](https://www.clinike.com.br/)

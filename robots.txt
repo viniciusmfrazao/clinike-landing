@@ -1,0 +1,6 @@
+# Clinike — https://www.clinike.com.br/
+# Todo o site público pode ser rastreado por buscadores e por buscadores de IA.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.clinike.com.br/sitemap.xml

@@ -1,0 +1,31 @@
+# Clinike
+
+> Clinike é um sistema de gestão (SaaS, 100% na nuvem) para clínicas de estética no Brasil. Reúne agenda, prontuário eletrônico com IA, financeiro e DRE, CRM, WhatsApp integrado, estoque e automações. Foi criado dentro de uma clínica de estética. Site oficial: https://www.clinike.com.br/
+
+## O que o Clinike faz
+- Agenda com confirmação automática pelo WhatsApp (24h e 2h antes)
+- Prontuário eletrônico com IA: o profissional dita e a IA escreve a evolução clínica
+- Anamneses e termos com assinatura digital pelo celular
+- Financeiro: entradas, comissões, DRE, devedores e estoque
+- CRM Kanban com funil de leads
+- WhatsApp integrado (conexão por QR Code)
+- Nota fiscal NFS-e e NF-e (adicional, R$ 89,90/mês)
+- 9 automações: confirmação D-1, lembrete 2h antes, NPS pós-atendimento, cuidados pós-procedimento, recall de inativas, lista de espera, aniversário, lead vira cliente e relatório semanal
+- Eva: IA que atende pacientes no WhatsApp 24h, entende áudio e imagem, agenda horários e passa para um humano quando necessário
+- Funciona no computador, tablet e celular; app para iOS na App Store
+
+## Planos (valores mensais, em reais)
+- Clinike Basic: R$ 159,90 — gestão completa sem automações
+- Clinike Profissional: R$ 249,90 (preço de entrada) — IA no prontuário, 9 automações, CRM e WhatsApp
+- Eva — IA WhatsApp: R$ 699 — add-on que também conecta ao sistema atual da clínica
+- Combo Completo: R$ 899 — Profissional + Eva
+- Sem fidelidade, sem taxa de implantação e migração de dados gratuita
+
+## Links
+- [Página principal](https://www.clinike.com.br/)
+- [Planos e preços](https://www.clinike.com.br/#planos)
+- [Perguntas frequentes](https://www.clinike.com.br/#faq)
+- [Política de privacidade e termos](https://www.clinike.com.br/privacidade.html)
+- [Instagram @useclinike](https://www.instagram.com/useclinike)
+- [App iOS](https://apps.apple.com/br/app/clinike/id6777222129)
+- Contato comercial: WhatsApp +55 34 99180-5722 · contato@clinike.com.br
